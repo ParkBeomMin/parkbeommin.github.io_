@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://parkbeommin.github.io/sitemap.xml
