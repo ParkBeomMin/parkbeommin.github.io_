@@ -232,6 +232,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll_lunr_js_search.rb
 
 # mimic GitHub Pages with --safe
 whitelist:
