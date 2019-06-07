@@ -290,7 +290,7 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments:  true
       share: true
       related: true
       
@@ -298,10 +298,11 @@ defaults:
       path: "_posts/algorithm"
       type: posts
     values:
-      layout: single
+      layout: single      
+      classes: wide
       author_profile: true
       read_time: true
-      comments: # true
+      comments:  true
       share: true
       related: true
       
