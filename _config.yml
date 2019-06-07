@@ -282,6 +282,17 @@ compress_html:
 
 # Defaults
 defaults:
+- scope:
+      path: "_posts/algorithm"
+      type: posts
+    values:
+      layout: single      
+      classes: wide
+      author_profile: true
+      read_time: true
+      comments:  true
+      share: true
+      related: true
   # _posts
   - scope:
       path: ""
@@ -294,17 +305,7 @@ defaults:
       share: true
       related: true
       
-  - scope:
-      path: "_posts/algorithm"
-      type: posts
-    values:
-      layout: single      
-      classes: wide
-      author_profile: true
-      read_time: true
-      comments:  true
-      share: true
-      related: true
+  
       
       #>>>>>>>>>>>>>>>>>>> 여기서부터 추가 됨
   # _pages 부분입니다.
