@@ -12,11 +12,11 @@ This web site is my development blog(D-LOG). :smile:
 
 Please take a good look. :smile::smile:
 
-##History
+## History
 - Hanyang Univ at Ansan ( 2013.03 ~ )
 - Join And Join ( 2017.11 ~ 2019.03 )
 
-##Project
+## Project
 - ALPA Application
 - Together Class
 - Parking Of Ansan 
