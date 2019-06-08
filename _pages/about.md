@@ -1,10 +1,25 @@
 ---
 permalink: /about/
 title: "About"
-excerpt: "Minimal Mistakes is a flexible two-column Jekyll theme."
-
-last_modified_at: 2019-04-03T15:15:09-04:00
+excerpt: "About me."
+last_modified_at: 2019-06-08T23:57:00+09:00
 toc: true
 ---
 
-Minimal Mistakes is a flexible two-column Jekyll theme. Perfect for hosting your personal site, blog, or portfolio on GitHub or self-hosting on your own server. As the name implies --- styling is purposely minimalistic to be enhanced and customized by you :smile:.
+I'm Beom-Min Park.
+This web site is my development blog(D-LOG). :smile:
+Please take a good look. :smile::smile:
+
+##History
+- Hanyang Univ at Ansan ( 2013.03 ~ )
+- Join And Join ( 2017.11 ~ 2019.03 )
+
+##Project
+- ALPA Application
+- Together Class
+- Parking Of Ansan 
+- Laundry Customized Order Management Application
+- Join And Join Company Website
+- Join And Join MOA Website
+- Join And Join Inventory management application
+
