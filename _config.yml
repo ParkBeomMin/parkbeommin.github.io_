@@ -93,9 +93,10 @@ og_image                 : # Open Graph/Twitter default site image
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  name                   : ParkBeomMin # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
-
+    - blog.naver.com/club1294
+    - www.instagram.com/park.beommin 
 # Analytics
 analytics:
   provider               : false # false (default), "google", "google-universal", "custom"
@@ -229,17 +230,18 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
+  # - jekyll-feed
   - jemoji
   - jekyll-include-cache
   - jekyll_lunr_js_search.rb
+  - jekyll-seo-tag
 
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
-  - jekyll-feed
+  # - jekyll-feed
   - jemoji
   - jekyll-include-cache
 
