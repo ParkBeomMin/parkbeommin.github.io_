@@ -1,5 +1,5 @@
 ---
-title: "Baekjoon-1427"
+title: "BOJ 1427[백준 1427]"
 date: 2019-06-13 08:35:00+09:00
 categories: algorithm baekjoon sorting
 ---

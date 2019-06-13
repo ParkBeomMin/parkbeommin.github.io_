@@ -1,5 +1,5 @@
 ---
-title: "Baekjoon-1149"
+title: "BOJ 1149[백준 1149]"
 date: 2019-06-11 22:25:00+09:00
 categories: algorithm baekjoon dynamic-programming
 ---
