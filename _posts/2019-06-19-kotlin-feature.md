@@ -6,7 +6,7 @@ toc: true
 ---
 
 <figure>
-    <img src="./assets/kotlin.png"/>
+    <img src="../assets/kotlin.png"/>
     <figcaption>android with kotlin</figcaption>
 </figure>
 
