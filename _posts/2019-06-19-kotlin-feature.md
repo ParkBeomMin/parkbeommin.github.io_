@@ -5,10 +5,7 @@ categories: android kotlin
 toc: true
 ---
 
-<figure>
-    <img src="../assets/kotlin.png"/>
-    <figcaption>android with kotlin</figcaption>
-</figure>
+![kotlin](/assets/kotlin.png)
 
 ## 코틀린은..
 
