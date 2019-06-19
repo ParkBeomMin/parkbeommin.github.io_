@@ -5,7 +5,7 @@ categories: android kotlin
 toc: true
 ---
 
-![kotlin](/assets/kotlin.png)
+<img src="/assets/kotlin.png" width="100%" >
 
 ## 코틀린은..
 
