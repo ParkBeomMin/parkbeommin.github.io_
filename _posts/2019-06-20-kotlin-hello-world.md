@@ -15,6 +15,7 @@ TextView는 화면 상단과 좌측, 우측에 제약을 걸어놓고, 상단에
 Button에는 화면 좌측과 우측, 하단과 상단은 TextView에 제약을 걸어놓았습니다. 
 
 > activity_main.xml
+
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
@@ -57,12 +58,14 @@ Button에는 화면 좌측과 우측, 하단과 상단은 TextView에 제약을 
 - 다국어 지원 방법
 
 프로젝트 내에서 res/values/strings/strings.xml 경로로 갑니다.  
+
 ```
 <resources>
     <string name="app_name">Kotlin_HelloWorld</string>
     <string name="hello_world">Hello World!</string>
 </resources>
 ```
+
 위와 같이 hello_world 리소스를 추가해줍니다.  
 
 <img src="/assets/string.png" width="100%" >
