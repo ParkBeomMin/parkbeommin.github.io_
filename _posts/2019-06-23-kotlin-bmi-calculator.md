@@ -3,6 +3,7 @@ title: "안드로이드 코틀린 개발하기 - BMI 계산기"
 date: 2019-06-23 04:47:00+09:00
 categories: android kotlin
 toc: true
+toc_sticky: true
 ---
 ## 사전 설정
 
