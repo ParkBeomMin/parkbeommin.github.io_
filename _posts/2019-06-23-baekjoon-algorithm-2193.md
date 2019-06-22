@@ -1,6 +1,6 @@
 ---
 title: "BOJ 2193[백준 2193]"
-date: 2019-06-23 14:27:00+09:00
+date: 2019-06-23 01:27:00+09:00
 categories: algorithm baekjoon dynamic-programming
 ---
 [이친수][url]
