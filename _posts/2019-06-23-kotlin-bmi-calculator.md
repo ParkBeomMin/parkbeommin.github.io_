@@ -6,7 +6,7 @@ toc: true
 ---
 ## 사전 설정
 
-#### Anko라이브러리 추가하기
+### Anko라이브러리 추가하기
 
 Anko라이브러리를 사용하기 위해서 아래와 같이 코드를 삽입해줍니다.  
 이번 예제에서는 Anko commons 라이브러리만 사용합니다.
@@ -37,7 +37,7 @@ Anko 라이브러리는 총 4개로 구성됩니다.
 3. Anko SQLite : SQLite를 쉽게 사용하는 라이브러리
 4. Anko Coroutines : 코루틴을 쉽게 사용하는 라이브러리  
 
-#### 벡터 드로어블 사용 환경 설정하기
+### 벡터 드로어블 사용 환경 설정하기
 
 > build.gradle (Module: app)
 
@@ -147,14 +147,14 @@ vectorDrawables.useSupportLibrary = true
 
 ## 화면 전환하기(Intent)
 
-#### 기본적인 방법
+### 기본적인 방법
 
 ~~~
 val intent = Intent(this, ResultActivity::class.java)
 startActivity(intent)
 ~~~
 
-#### Anko Commons 라이브러리 방법
+### Anko Commons 라이브러리 방법
 
 ~~~
 startActivity<ResultActivity>()
@@ -164,7 +164,7 @@ startActivity<ResultActivity>()
 
 여기서 우리는 결과 화면으로 몸무게와 키 값을 넘겨주어야 하기 때문에, 액티비티간 데이터 전송을 추가하도록 하겠습니다.  
 
-#### 기본적인 방법 - 데이터 전송
+### 기본적인 방법 - 데이터 전송
 
 ~~~
 val intent = Intent(this, ResultActivity::class.java)
@@ -173,7 +173,7 @@ intent.putExtra("height", heightEdt.text.toString())
 startActivity(intent)
 ~~~
 
-#### Anko Commons 라이브러리 방법 - 데이터 전송
+### Anko Commons 라이브러리 방법 - 데이터 전송
 
 ~~~
 startActivity<ResultActivity>(
@@ -184,7 +184,7 @@ startActivity<ResultActivity>(
 
 이제 결과 화면에서 값을 받아와야 합니다.
 
-#### 값 받아오기
+### 값 받아오기
 
 ~~~
 val weight = intent.getStringExtra("weight").toInt()
@@ -193,7 +193,7 @@ val height = intent.getStringExtra("height").toInt()
 
 값을 넘겨줄 때, 지정했던 **키 값**으로 가지고 옵니다.
 
-#### 부모 액티비티 설정하기
+### 부모 액티비티 설정하기
 
 부모 액티비티를 설정하면 상단에 위치한 네비게이션바에 자동으로 뒤로가기 버튼이 생겨납니다.  
 
@@ -241,7 +241,7 @@ when {
 
 몸무게와 키에 입력했던 값이 앱을 다시 실행했을 때 남아있도록 합니다.  
 
-#### 데이터 저장하기
+### 데이터 저장하기
 
 값을 입력하고 버튼을 누르면 저장이 됩니다.  
 
@@ -258,7 +258,7 @@ private fun saveData(weight: Int, height: Int) {
 }
 ~~~
 
-#### 데이터 불러오기
+### 데이터 불러오기
 
 앱이 실행되었을 때, 값을 불러옵니다.  
 초기값은 0으로 설정합니다.
