@@ -14,9 +14,21 @@ Please take a good look. :smile::smile:
 
 ## History
 
-- Hanyang Univ at Ansan ( 2013.03 ~ )
-- Join And Join ( 2017.11 ~ 2019.03 )
-- Android class at Hyosung High School ( 2018.12.17 ~ 12.20 )
+### Hanyang Univ at Ansan 
+
+2013.03 ~   
+Major in Computer Science Engineering
+
+### Join And Join 
+
+2017.11 ~ 2019.03  
+Cofounder, Head Developer
+
+### Android class at Hyosung High School 
+
+2018.12.17 ~ 12.20  
+Android basic lessons
+
 
 ## Skill
 
@@ -28,14 +40,20 @@ Please take a good look. :smile::smile:
 
 ## Award
 
-- SW 재능 기부 챌린지 공모전 | 장관상 | 정보통신기술진흥센터 | 2017.11.24
+### SW 재능 기부 챌린지 공모전
+장관상  
+정보통신기술진흥센터  
+2017.11.24
 
 ## Licence
 
-- 정보처리기사 | 한국산업인력공단 | 18202021164W | 2018.08.17
+### 정보처리기사  
+한국산업인력공단  
+18202021164W  
+2018.08.17
 
 ## Project
-- ALPA Application
+### ALPA Application
 
 <img src="https://raw.githubusercontent.com/ParkBeomMin/project_alpa/master/%EA%B7%B8%EB%A6%BC1.png" style="width: 50px">
 
@@ -45,7 +63,7 @@ JAVA, PHP, MySQL
 학회 공지 및 커뮤니티 어플  
 [소스코드 보러가기][alpa-url]  
 
-- 함수(함께 하는 수업)
+### 함수(함께 하는 수업)
 
 <img src="https://raw.githubusercontent.com/ParkBeomMin/TogetherClass/master/app/src/main/res/mipmap-hdpi/ic_launcher.png" style="width: 50px">
 
@@ -56,7 +74,7 @@ JAVA, PHP, MySQL
 [소스코드 보러가기][together-class-url]  
 
 
-- Parking Of Ansan
+### Parking Of Ansan
 
 <img src="https://raw.githubusercontent.com/ParkBeomMin/ParkingOfAnsan/master/app/src/main/res/drawable/logo.png" style="width: 50px">
 
@@ -66,7 +84,7 @@ JAVA, Google Map API, Google Place API
 현재 위치 기반 주변 공영주차장 검색 어플  
 [소스코드 보러가기][parking-of-ansan-url]  
 
-- Laundry Customized Order Management Application
+### Laundry Customized Order Management Application
 
 <img src="https://raw.githubusercontent.com/jisung0920/Darimi/master/app/src/main/res/drawable/logo.png" style="width: 50px">
 
@@ -76,7 +94,7 @@ JAVA, RealmDB
 세탁소 소상공인 맞춤형 주문관리 어플  
 [소스코드 보러가기][sosang-url]  
 
-- Join And Join Company Website
+### Join And Join Company Website
 
 > 조인앤조인  
 2018.01 ~ 2018.03  
@@ -84,7 +102,7 @@ Angular, Firebase
 회사 소개 홈페이지  
 [데모 바로가기][join-company-url]  
 
-- Join And Join MOA Website
+### Join And Join MOA Website
 
 > 조인앤조인  
 2018.02 ~ 2018.03  
@@ -92,7 +110,7 @@ Angular, Firebase
 브랜드 '모아' 홈페이지  
 [데모 바로가기][join-moa-url]   
 
-- Join And Join Inventory management application
+### Join And Join Inventory management application
 
 <img src="../assets/about/stock_manager_logo.png" style="width: 50px">
 
@@ -101,7 +119,7 @@ Angular, Firebase
 JAVA, Firebase  
 재고관리 어플
 
-- Cook Recipe Chatbot
+### Cook Recipe Chatbot
 
 > 한양대학교 졸업작품 팀 프로젝트  
 2019.03 ~ 2019.06  
