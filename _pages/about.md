@@ -2,22 +2,34 @@
 permalink: /about/
 title: "About"
 excerpt: "About me."
-last_modified_at: 2019-06-08T23:57:00+09:00
+last_modified_at: 2019-07-03T11:15:00+09:00
 toc: true
 ---
 
-I'm Beom-Min Park.
+안녕하세요.  
+안드로이드 개발을 즐거워하는 **박범민**입니다.  
+가치 있는 일을 하며, 행복하고 즐거운 삶을 살아가고 싶습니다.  
 
-This web site is my development blog(D-LOG). :smile:
+저에게 있어서 가치 있는 일은,  
+1. 내가 능동적으로 할 수 있는 일
+2. 내가 즐겁게 할 수 있는 일
+3. 누군가에겐 도움이 되는 일
+4. 객관적으로 부끄럽지 않은 일
 
-Please take a good look. :smile::smile:
+입니다.  
+
+꿈이라는 것은 최근 경험이나 주변 환경이나 현재의 상황에 영향을 받는다고 생각을 합니다.  
+따라서, 지금 제가 재미있어하고 해보고 싶은 것이 안드로이드 또는 웹 개발이기 때문에 현재 저의 꿈은 **개발자**입니다.  
+주니어 개발자라고 하기에도 부족함이 많이 있지만, 계속해서 성장해 나갈 수 있도록 노력할 것입니다. :smile:
+
+감사합니다.
 
 ## History
 
 ### Hanyang Univ at Ansan 
 
-2013.03 ~   
-Major in Computer Science Engineering
+2013.03 ~ 2019.08  
+B.Sc. in Computer Science Engineering
 
 ### Join And Join 
 
@@ -32,11 +44,11 @@ Android basic lessons
 
 ## Skill
 
-<img src="../assets/about/android.png" style="width: 50px; margin-right: 16px">
-<img src="../assets/about/java.png" style="width: 50px; margin-right: 16px">
-<img src="../assets/about/kotlin.png" style="width: 50px; margin-right: 16px">
-<img src="../assets/about/vue.png" style="width: 50px; margin-right: 16px">
-<img src="../assets/about/nodejs.png" style="width: 50px">
+<img src="../assets/about/android.png" style="width: 100px; margin-right: 16px">
+<img src="../assets/about/java.png" style="width: 80px; margin-right: 16px">
+<img src="../assets/about/kotlin.png" style="width: 80px; margin-right: 16px">
+<img src="../assets/about/vue.png" style="width: 60px; margin-right: 16px">
+<img src="../assets/about/nodejs.png" style="width: 60px">
 
 ## Award
 
