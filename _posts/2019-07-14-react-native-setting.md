@@ -221,6 +221,7 @@ App.js 파일을 열어보니, 출력되었던 텍스트가 보입니다.
 
 ## 레퍼런스
 
+[React Native 공식 문서][docs-url]
 [Node Update][ref-url-1]
 
 [last-posting]: "https://parkbeommin.github.io/react-native/react-native-start/"
