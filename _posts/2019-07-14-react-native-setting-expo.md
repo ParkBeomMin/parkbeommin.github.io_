@@ -1,5 +1,5 @@
 ---
-title: "[React Native] React Native 시작하기" 
+title: "[React Native] React Native 시작하기 - Expo" 
 date: 2019-07-14 02:21:00+09:00
 categories: react-native
 toc: true
