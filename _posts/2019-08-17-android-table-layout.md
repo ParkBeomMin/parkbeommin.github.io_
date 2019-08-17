@@ -5,7 +5,7 @@ categories: android boostcourse
 toc: true
 toc_sticky: true
 ---
-# 0.
+## 0.
 
 우리는 안드로이드에서 대표적인 레이아웃인 LinearLayout, RelativeLayout, ConstrainLayout을 활용해서 다양한 화면을 만들 수 있습니다.
 
@@ -13,7 +13,7 @@ toc_sticky: true
 
 이번에는 테이블 형태의 모양을 제공해주는 테이블 레이아웃에 대해서 알아보도록 하겠습니다.
 
-# 1. 구조
+## 1. 구조
 
 테이블 레이아웃의 구조는 다음과 같습니다.
 
@@ -31,7 +31,7 @@ TableLayout으로 전체를 감싸고 그 안에 한 행(row)이 TableRow가 됩
 
 그리고 그 행안에 필요한 위젯들을 추가해줍니다.
 
-# 2. 속성
+## 2. 속성
 
 속성에 대해 설명하기에 앞서 기본적으로 테이블 레이아웃을 구성하고, 속성을 하나씩 추가해가면서 변화하는 모습으로 설명을 드리겠습니다.
 
@@ -70,7 +70,7 @@ TableLayout으로 전체를 감싸고 그 안에 한 행(row)이 TableRow가 됩
  ```
  <img src="https://postfiles.pstatic.net/MjAxOTA3MjRfMTIg/MDAxNTYzOTQ4MzQ2OTgz.kpGUdeipNxivzCgyxPoS1cKpOMdkh0Sleaxc5C8PkaEg.4qVsZW_6C3OPvYhHr3z_J2dD32FZu50Ci-Nib2PiGLEg.PNG.club1294/image.png?type=w773">​
 
-## 2.1 테이블 레이아웃 속성(TableLayout Attribute)
+### 2.1 테이블 레이아웃 속성(TableLayout Attribute)
 
 영상에서는 stretchColumns에 대한 속성만 언급이 되어있지만, 안드로이드 공식문서에 보면 이것 외에 두가지 속성이 더 있습니다.
 
@@ -80,7 +80,7 @@ TableLayout으로 전체를 감싸고 그 안에 한 행(row)이 TableRow가 됩
 
 세 가지 모두 값으로 열(column)의 인덱스 값을 받습니다.
 
-### 2.1.1 collapseColumns
+#### 2.1.1 collapseColumns
 
 collapseColumns는 지정한 열을 없애줍니다.
 
@@ -113,7 +113,7 @@ collapseColumns는 지정한 열을 없애줍니다.
 
 속성 값이 테이블 열의 인덱스 값을 벗어나게 되면, 무시하게 됩니다.
 
-### 2.1.2 shrinkColumns
+#### 2.1.2 shrinkColumns
 
 shrinkColumns는 지정한 열을 축소해줍니다.
 
@@ -163,7 +163,7 @@ shrinkColumns의 경우 화면을 벗어날 경우 해당 인덱스를 축소시
 
 모든 열이 화면에 맞게 축소된 것을 볼 수 있습니다.
 
-### 2.1.3 stretchColumns
+#### 2.1.3 stretchColumns
 
 stretchColumns는 지정한 열을 늘려줍니다.
 
@@ -195,7 +195,7 @@ shrink 속성과 마찬가지로 모든 열에 지정하고 싶을 때는 '*'을
 
  <img src="https://postfiles.pstatic.net/MjAxOTA3MjRfMzgg/MDAxNTYzOTUwMDc1ODkz.m9dw-WoF1iQav72IFYIjFhd4BKwAwAdp5MZfUHFVh8Yg.qiey47SEiGhbDAjmhShbZz47Lgkpay_cQLLKeKL7zFUg.PNG.club1294/image.png?type=w773">
 
-## 2.2 테이블레이아웃 내 위젯 속성
+### 2.2 테이블레이아웃 내 위젯 속성
 
 테이블 레이아웃 내에 위치한 위젯들에는 layout_column이란 속성을 지정할 수 있습니다.
 
@@ -246,7 +246,7 @@ layout_column의 값은 마찬가지로 열(column)의 인덱스 값이고 해�
 
 ​
 
-# 3. 생각해보기
+## 3. 생각해보기
 
 <img src="https://postfiles.pstatic.net/MjAxOTA3MjRfMTQx/MDAxNTYzOTU3Nzg4NjU3.-gA2d_wflwGBsYqQBmgXP8MwfIYA9Kf8vfOlU7jmFuMg.vNULTjr02-_2AqCTX2I3mYptSuef9qLspdCSDuqlKz8g.PNG.club1294/image.png?type=w773">
 
@@ -257,7 +257,7 @@ A) 유지 보수에 더 불편함이 많을 것 같다.
 리니어 레이아웃으로 구성을 한다면, 각 행 마다 수정을 해줘야한다.
 감사합니다.
 
-# 레퍼런스
+## 레퍼런스
 
 [#부스트코스][ref-url-1]
 
