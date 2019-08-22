@@ -44,19 +44,19 @@ JDK는 8 버전 이상이어야합니다.
 
 Node는 저번 Expo 셋팅 때 10.16.0 버전으로 업그레이드했으니, 넘어가고 Watchman과 JDK, React Native CLI를 설치해보도록 하겠습니다.  
 
-<img src="../assets/react-native-cli-setting/watchman.png">
+<img src="/assets/react-native-cli-setting/watchman.png">
 
 watchman 설치 후 이런 에러가 뜨네요.  
 하지만 친절하게도 어떻게 하라고 안내가 되어있어서 그대로 복붙해줍니다.  
 
-<img src="../assets/react-native-cli-setting/jdk1.png">
-<img src="../assets/react-native-cli-setting/jdk2.png">
+<img src="/assets/react-native-cli-setting/jdk1.png">
+<img src="/assets/react-native-cli-setting/jdk2.png">
 
 JDK 설치도 완료가 되었습니다.  
 이제 React Native CLI만 설치하면 필요한 설치는 다 끝이나네요.  
 React Native CLI 설치 할 때 앞에 sudo를 붙여주었습니다.  
 
-<img src="../assets/react-native-cli-setting/install-react-native-cli.png">
+<img src="/assets/react-native-cli-setting/install-react-native-cli.png">
 
 이제 필요한 설치가 모두 끝이났네요.  
 
@@ -65,8 +65,8 @@ React Native CLI 설치 할 때 앞에 sudo를 붙여주었습니다.
 React Native 앱 개발을 위해서는 Android SDK 버전이 Pie버전이 요구된다고 합니다.  
 문서에 나와있는대로 따라서 SDK 설치를 해줍니다.  
 
-<img src="../assets/react-native-cli-setting/install-sdk.png">
-<img src="../assets/react-native-cli-setting/install-sdk2.png">
+<img src="/assets/react-native-cli-setting/install-sdk.png">
+<img src="/assets/react-native-cli-setting/install-sdk2.png">
 
 우측 하단의 show package details을 클릭하여서 알맞는 것들을 체크하고 설치해줍니다.  
 
@@ -80,7 +80,7 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 ~~~
 
-<img src="../assets/react-native-cli-setting/set-bash-profile.png">
+<img src="/assets/react-native-cli-setting/set-bash-profile.png">
 
 이제 환경 변수 설정까지 끝났습니다.
 
@@ -92,7 +92,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 react-native init AwesomeProject
 ~~~
 
-<img src="../assets/react-native-cli-setting/cocoapod.png">
+<img src="/assets/react-native-cli-setting/cocoapod.png">
 
 생성이 완료되고, cocoapod이라는 ios개발에 필요한 것을 설치할 것이냐 묻습니다. y를 입력하고 설치를 진행해주면 생성이 끝납니다.  
 
@@ -104,7 +104,7 @@ react-native init AwesomeProject
 react-native run-android
 ~~~
 
-<img src="../assets/react-native-cli-setting/err1.png">
+<img src="/assets/react-native-cli-setting/err1.png">
 
 에러가 나네요..  
 안드로이드 환경변수 관련된 에러인거 같은데 뭐가 잘못된걸까요..?  
@@ -114,11 +114,11 @@ SDK 설치가 제대로 완료가 안되었었네요..
 .bash_profile을 열어 확인해보니 문서에서 하라는대로 잘 되어있습니다.  
 그럼 경로가 잘못된걸까요..?  
 
-<img src="../assets/react-native-cli-setting/confirm-sdk-path.png">
+<img src="/assets/react-native-cli-setting/confirm-sdk-path.png">
 
 SDK 매니저에 들어가서 SDK 경로를 확인해보니 잘못된 것 같진 않습니다..  
 
-<img src="../assets/react-native-cli-setting/empty-path.png">
+<img src="/assets/react-native-cli-setting/empty-path.png">
 
 echo로 찍어보니 아무것도 출력이 되지 않네요..  
 
@@ -131,12 +131,12 @@ echo로 찍어보니 아무것도 출력이 되지 않네요..
 source $HOME/.bash_profile
 ~~~
 
-<img src="../assets/react-native-cli-setting/path.png">
+<img src="/assets/react-native-cli-setting/path.png">
 
 이제 설정이 잘 되었습니다..!  
 바로 다시 실행시켜보니 또 에러가 납니다..  
 
-<img src="../assets/react-native-cli-setting/err2.png">
+<img src="/assets/react-native-cli-setting/err2.png">
 
 그런데 조금 다른 것 같습니다.  
 SDK 경로가 조금 이상하게 출력이 되는 것 같습니다.  
@@ -147,15 +147,15 @@ SDK 경로가 조금 이상하게 출력이 되는 것 같습니다.
 
 에러를 검색해보고 [여기][ref-url-1]를 참고하여서 해결하였습니다!!
 
-<img src="../assets/react-native-cli-setting/import-project.png">
+<img src="/assets/react-native-cli-setting/import-project.png">
 
 일단 안드로이드 스튜디오를 실행하여서, React Native 프로젝트를 import해줍니다.  
 
-<img src="../assets/react-native-cli-setting/sync.png">
+<img src="/assets/react-native-cli-setting/sync.png">
 
 그리고 싱크를 맞춰줍니다.  
 
-<img src="../assets/react-native-cli-setting/solution.png">
+<img src="/assets/react-native-cli-setting/solution.png">
 
 그러면 에러 메시지가 뜹니다.  
 SDK 경로에 이상이 있다는 거죠..  
@@ -167,13 +167,13 @@ react-native start
 react-native run-android
 ~~~
 
-<img src="../assets/react-native-cli-setting/start.png">
-<img src="../assets/react-native-cli-setting/run-android.png">
+<img src="/assets/react-native-cli-setting/start.png">
+<img src="/assets/react-native-cli-setting/run-android.png">
 
 문서에서는 react-native run-android 만 하면 된다고 했는데, 저는 react-native start로 서버 같은걸 실행시켜줘야하더라구요.  
 
 
-<img src="../assets/react-native-cli-setting/finish.jpeg">
+<img src="/assets/react-native-cli-setting/finish.jpeg">
 
 그러면 이렇게 디바이스에 출력이 됩니다.!!
 

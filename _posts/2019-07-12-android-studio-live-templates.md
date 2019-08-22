@@ -22,25 +22,25 @@ Live Templates는 사용자가 지정한 키워드를 통해 어떠한 코드 �
 
 Preferences창이 뜨면 검색창에 live를 검색해줍니다.  
 그러면 다음 그림과 같이 Live Templates가 나타납니다.  
-<img src="../assets/live-templates/live-templates-1.png" >
+<img src="/assets/live-templates/live-templates-1.png" >
 
 이제 우리는 키워드를 추가해줄것이기 때문에 우측에 있는 + 버튼을 눌러서 Live Template를 눌러줍니다.  
 
-<img src="../assets/live-templates/live-template-2.png" >
+<img src="/assets/live-templates/live-template-2.png" >
 
 이제 abbreviation에 키워드를 적어줍니다.  
 Description과 Template text도 알맞게 작성해줍니다.  
 그리고 하단에 있는 Define을 눌러줍니다.  
 
-<img src="../assets/live-templates/live-templates-3.png" >
+<img src="/assets/live-templates/live-templates-3.png" >
 
 우리가 만들어줄 키워드는 xml에서 쓰일것이기 때문에 xml에 체크해줍니다.  
 
-<img src="../assets/live-templates/live-templates-4.png">
+<img src="/assets/live-templates/live-templates-4.png">
 
 이제 xml파일로 돌아와서 작성해준 키워드를 입력하면 자동완성이 될 수 있도록 나오는 것을 확인할 수 있습니다.  
 
-<img src="../assets/live-templates/live-templates-5.png" >
+<img src="/assets/live-templates/live-templates-5.png" >
 
 이제 응용하여서 다른 키워드들도 만들어서 좀 더 편리하게 개발을 할 수 있습니다. :smile:
 
