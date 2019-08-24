@@ -6,23 +6,7 @@ last_modified_at: 2019-07-03T11:15:00+09:00
 toc: true
 ---
 
-안녕하세요.  
-안드로이드 개발을 즐거워하는 **박범민**입니다.  
-가치 있는 일을 하며, 행복하고 즐거운 삶을 살아가고 싶습니다.  
-
-저에게 있어서 가치 있는 일은,  
-1. 내가 능동적으로 할 수 있는 일
-2. 내가 즐겁게 할 수 있는 일
-3. 누군가에겐 도움이 되는 일
-4. 객관적으로 부끄럽지 않은 일
-
-입니다.  
-
-꿈이라는 것은 최근 경험이나 주변 환경이나 현재의 상황에 영향을 받는다고 생각을 합니다.  
-따라서, 지금 제가 재미있어하고 해보고 싶은 것이 안드로이드 또는 웹 개발이기 때문에 현재 저의 꿈은 **개발자**입니다.  
-주니어 개발자라고 하기에도 부족함이 많이 있지만, 계속해서 성장해 나갈 수 있도록 노력할 것입니다. :smile:
-
-감사합니다.
+[포트폴리오 바로가기][portfolio]
 
 ## History
 
@@ -138,6 +122,8 @@ JAVA, Firebase
 Vue, Python, RiveScript  
 AI를 이용한 요리 레시피 챗봇 서비스
 
+
+[portfolio]: https://parkbeommin.github.io/portfolio/
 [alpa-url]: https://github.com/ParkBeomMin/project_alpa
 [together-class-url]: https://github.com/ParkBeomMin/TogetherClass
 [parking-of-ansan-url]: https://github.com/ParkBeomMin/ParkingOfAnsan
