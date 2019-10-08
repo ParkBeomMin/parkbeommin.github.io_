@@ -1,6 +1,6 @@
 ---
 title: "BOJ 1157[백준 1157]"
-date: 2019-10-08 09:41:00+09:00
+date: 2019-10-08 16:08:00+09:00
 categories: algorithm baekjoon string-handling
 ---
 [단어 공부][url]
