@@ -47,4 +47,4 @@ fi
 
 version을 변경하지 않고 push를 시도한다면 아래와 같은 에러메세지가 출력되는 것을 볼 수 있습니다.
 
-<img src="/assets/images/git/pre-push.png">
+<img src="/assets/git/pre-push.png">
