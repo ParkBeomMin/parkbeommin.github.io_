@@ -21,6 +21,7 @@ twitter_username: username
 github_username: ParkBeomMin
 minimal_mistakes_skin: dark
 search: true
+logo: 'https://avatars0.githubusercontent.com/u/23355295?s=460&v=4'
 
 # Build settings
 markdown: kramdown
