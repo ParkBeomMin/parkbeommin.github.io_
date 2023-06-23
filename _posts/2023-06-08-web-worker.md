@@ -7,7 +7,7 @@ categories: web frontend
 > Web Worker와 Service Worker는 Web API 중 하나이다.  
 > Web Worker와 Service Worker는 웹 애플리케이션에서 백그라운드 작업을 수행하기 위한 기술이다.
 
-<img src="../assets/web/web-worker-and-service-worker.avif">
+<img src="/assets/web/web-worker-and-service-worker.avif">
 
 출처: [web.dev][이미지출처1]
 
