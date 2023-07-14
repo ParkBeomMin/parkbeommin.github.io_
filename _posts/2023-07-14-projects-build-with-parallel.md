@@ -1,5 +1,5 @@
 ---
-title: '[DX] 다수의 프로젝트 병렬로'
+title: '[DX] 다수의 프로젝트 병렬로 빌드&배포하기'
 date: 2023-07-14 10:48:00+09:00
 categories: dx linux shellscript
 ---
