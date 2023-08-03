@@ -15,24 +15,11 @@
                 :key="`keyword-${i}`"
                 >{{ keyword }}</span
             >
-            <div class="flex mt-2">
-                <a
-                    class="mr-2"
-                    v-for="(social, index) in socialList"
-                    :key="index"
-                    :href="social.link"
-                >
-                    <IconFeather :data-feather="social.type" />
-                </a>
-            </div>
+            <SocialList />
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
 const keywordList = reactive(["FrontEnd Engineer", "까망베르 집사🐈🐈‍⬛", "DX"]);
-const socialList = reactive([
-    { type: "github", link: "https://github.com/ParkBeomMin" },
-    { type: "mail", link: "mailto:club20608@gmail.com" },
-]);
 </script>
