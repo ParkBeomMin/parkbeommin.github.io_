@@ -66,3 +66,9 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## 참고 블로그
+
+https://wormwlrm.github.io/
+https://techblog.woowahan.com/11998/
+https://ansohxxn.github.io/index.html
