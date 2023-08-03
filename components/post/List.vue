@@ -6,14 +6,35 @@
             <p>{{ article.description }}</p>
         </div>
     </ContentList> -->
-    <h2>{{ title }}</h2>
-    <ContentQuery path="/posts" :where="{ title: { $contains: searchKeyword } }" :limit="limit"
+    <h2 class="font-bold text-3xl">{{ title }}</h2>
+    <ContentQuery
+        path="/posts"
+        :where="{ title: { $contains: searchKeyword } }"
+        :limit="limit"
         ><template #default="{ data }">
-            <span>{{ data.length }}</span>
-            <ul>
-                <li v-for="(post, i) of data" :key="i">
+            <span v-if="isShowCnt"
+                >{{ data.length }} 개의 포스트가 있어요.</span
+            >
+            <ul class="mt-8">
+                <li
+                    v-for="(post, i) of data"
+                    :key="i"
+                    class="mb-4 pb-4 border-b-4 border-grey-900 transition duration-500 hover:text-blue-500 hover:translate-x-1"
+                >
                     <nuxt-link :to="post._path">
-                        {{ post.title }}
+                        <span
+                            class="mr-2 text-gray-500"
+                            v-for="(category, i) of post.categories?.split(' ')"
+                            :key="`post-category-${i}`"
+                            >#{{ category }}</span
+                        >
+                        <h3 class="font-bold text-xl">
+                            {{ post.title }}
+                        </h3>
+                        <p>{{ post.description }}</p>
+                        <span class="text-sm">{{
+                            convertDate(post.date)
+                        }}</span>
                     </nuxt-link>
                 </li>
             </ul>
@@ -28,17 +49,32 @@
 const { title, searchKeyword, limit } = defineProps({
     title: {
         type: String,
-        default: '',
+        default: "",
     },
     searchKeyword: {
         type: String,
-        default: '',
+        default: "",
     },
     limit: {
         type: Number,
         default: 0,
     },
+    isShowCnt: {
+        type: Boolean,
+        default: true,
+    },
 });
+
+const convertDate = (data: string) => {
+    if (!data) {
+        return "";
+    }
+    const tmp = new Date(data);
+    const month =
+        tmp.getMonth() + 1 < 10 ? `0${tmp.getMonth() + 1}` : tmp.getMonth() + 1;
+    const date = tmp.getDate() < 10 ? `0${tmp.getDate()}` : tmp.getDate();
+    return `${tmp.getFullYear()}-${month}-${date}`;
+};
 
 // const { getPostList } = usePosts();
 
