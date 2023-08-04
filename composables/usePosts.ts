@@ -17,7 +17,21 @@ export const usePosts = () => {
         categories: [],
     }));
 
+    const resetFilter = () => {
+        postState.value.keyword = "";
+        postState.value.categories = [];
+    };
+
     const setCategory = ({ category }: { category: string }) => {
+        const router = useRouter();
+        const route = useRoute();
+        console.log(route.path);
+
+        if (route.path != "/posts") {
+            console.log("push");
+
+            router.push("/posts");
+        }
         const findIndex = postState.value.categories.findIndex(
             (c) => c === category
         );
@@ -28,7 +42,7 @@ export const usePosts = () => {
         postState.value.categories.push(category);
         console.log("postState.value.categories", postState.value.categories);
     };
-    const getPostList = async () => {
+    const getPostList = async ({ limit = 0 }: { limit?: number } = {}) => {
         postState.value.postList = (
             await queryContent("posts")
                 .where({
@@ -39,22 +53,23 @@ export const usePosts = () => {
                         $contains: [...postState.value.categories],
                     },
                 })
+                .sort({ date: -1 })
+                .limit(limit)
                 .find()
-        )
-            .map((post: any) => ({
-                title: post.title,
-                description: post.description,
-                categories: post.categories,
-                date: post.date,
-                _path: post._path,
-            }))
-            .sort((a: any, b: any) => {
-                const aDate = new Date(a.date);
-                const bDate = new Date(b.date);
-                return bDate.getTime() - aDate.getTime();
-            });
+        ).map((post: any) => ({
+            title: post.title,
+            description: post.description,
+            categories: post.categories,
+            date: post.date,
+            _path: post._path,
+        }));
+        // .sort((a: any, b: any) => {
+        //     const aDate = new Date(a.date);
+        //     const bDate = new Date(b.date);
+        //     return bDate.getTime() - aDate.getTime();
+        // });
         console.log(postState.value.postList);
     };
 
-    return { postState, getPostList, setCategory };
+    return { postState, getPostList, setCategory, resetFilter };
 };

@@ -13,14 +13,16 @@
 </template>
 
 <script setup lang="ts">
-const { postState, getPostList } = usePosts();
-
-onMounted(async () => {
-    await getPostList();
-});
+const { postState, getPostList, resetFilter } = usePosts();
 
 const randomPlaceholder = computed(() => {
     const random = Math.floor(Math.random() * postState.value.postList.length);
     return postState.value.postList[random]?.title;
+});
+
+onBeforeRouteLeave((to, from) => {
+    if (!to.fullPath.includes("/posts")) {
+        resetFilter();
+    }
 });
 </script>

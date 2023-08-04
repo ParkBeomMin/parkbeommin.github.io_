@@ -1,5 +1,11 @@
 <template>
-    <header class="fixed flex h-16 w-full z-50">
+    <header
+        ref="header"
+        :class="[
+            `fixed flex h-16 w-full z-50 text-white`,
+            { 'bg-white border-b-2 text-black': isScroll },
+        ]"
+    >
         <div class="flex flex-row max-w-5xl w-7/12 m-auto">
             <h1 class="flex-1">Beom Log</h1>
             <ul class="flex flex-row">
@@ -21,4 +27,24 @@ const menuList = reactive([
     { text: "Posts", link: "/posts" },
     { text: "AboutMe", link: "/aboutMe" },
 ]);
+
+let isScroll = ref(false);
+const header = ref();
+
+onMounted(() => {
+    window.addEventListener("scroll", () => {
+        console.log("scroll", window.scrollY);
+
+        console.log(
+            "(header.value as HTMLElement).clientHeight",
+            (header.value as HTMLElement).clientHeight
+        );
+
+        if (window.scrollY <= (header.value as HTMLElement).offsetHeight) {
+            isScroll.value = false;
+        } else {
+            isScroll.value = true;
+        }
+    });
+});
 </script>

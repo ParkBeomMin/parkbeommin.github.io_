@@ -1,7 +1,7 @@
 <template>
     <img
         ref="banner"
-        class="w-full h-48 object-cover opacity-50"
+        class="w-full h-64 object-cover opacity-50"
         src="~/assets/banner.jpg"
         alt="banner"
     />

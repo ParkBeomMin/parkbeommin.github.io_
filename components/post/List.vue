@@ -13,7 +13,7 @@
         :limit="limit"
         ><template #default="{ data }"> -->
     <span v-if="isShowCnt">{{ postList.length }} 개의 포스트가 있어요.</span>
-    <ul class="mt-8">
+    <ul class="my-8">
         <li
             v-for="(post, i) of postList"
             :key="i"
@@ -72,12 +72,11 @@ const convertDate = (data: string) => {
     return `${tmp.getFullYear()}-${month}-${date}`;
 };
 
-const { postState } = usePosts();
+const { postState, getPostList } = usePosts();
 
 const postList = computed(() => postState.value.postList);
 
-// onMounted(async () => {
-//     const test = await getPostList(searchKeyword);
-//     console.log(test);
-// });
+onMounted(async () => {
+    await getPostList({ limit });
+});
 </script>

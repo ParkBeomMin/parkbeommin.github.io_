@@ -37,14 +37,15 @@ const getDate = (value: string) => {
     }
 };
 
-const components = {
-    h2: "customh2",
-};
+const components = {};
 </script>
 
 <style>
-customh2 {
-    font-weight: bold;
-    font-size: 28px;
+h2 {
+    font-weight: bold !important;
+    font-size: 28px !important;
+}
+a {
+    text-decoration: none !important;
 }
 </style>
