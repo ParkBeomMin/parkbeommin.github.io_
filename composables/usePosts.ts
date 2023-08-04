@@ -25,11 +25,8 @@ export const usePosts = () => {
     const setCategory = ({ category }: { category: string }) => {
         const router = useRouter();
         const route = useRoute();
-        console.log(route.path);
 
         if (route.path != "/posts") {
-            console.log("push");
-
             router.push("/posts");
         }
         const findIndex = postState.value.categories.findIndex(
@@ -43,6 +40,9 @@ export const usePosts = () => {
         console.log("postState.value.categories", postState.value.categories);
     };
     const getPostList = async ({ limit = 0 }: { limit?: number } = {}) => {
+        console.log(postState.value.keyword.toUpperCase());
+        console.log(postState.value.keyword.toLowerCase());
+
         postState.value.postList = (
             await queryContent("posts")
                 .where({
@@ -68,7 +68,6 @@ export const usePosts = () => {
         //     const bDate = new Date(b.date);
         //     return bDate.getTime() - aDate.getTime();
         // });
-        console.log(postState.value.postList);
     };
 
     return { postState, getPostList, setCategory, resetFilter };
