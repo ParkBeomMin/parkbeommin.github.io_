@@ -15,7 +15,6 @@ let diffDay = reactive({
 const random = Math.floor(Math.random() * 4);
 const timer = computed(() => {
     const suffix = ["일", "시간", "분", "초"];
-    console.log(random);
     const diffKeys = Object.keys(diffDay);
     const selectedDiffKey = diffKeys[random] as keyof typeof diffDay;
     return `${diffDay[selectedDiffKey]}${suffix[random]} 동안 운영중..`;
@@ -41,8 +40,6 @@ const getDate = () => {
     const diffHour = Math.floor(diff / (60 * 60 * 1000));
     const diffMin = Math.floor(diff / (60 * 1000));
     const diffSec = Math.floor(diff / 1000);
-    console.log("getdate");
-
     return { date: diffDate, hour: diffHour, min: diffMin, sec: diffSec };
 };
 </script>

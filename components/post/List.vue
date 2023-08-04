@@ -7,42 +7,38 @@
         </div>
     </ContentList> -->
     <h2 class="font-bold text-3xl">{{ title }}</h2>
-    <ContentQuery
+    <!-- <ContentQuery
         path="/posts"
         :where="{ title: { $contains: searchKeyword } }"
         :limit="limit"
-        ><template #default="{ data }">
-            <span v-if="isShowCnt"
-                >{{ data.length }} 개의 포스트가 있어요.</span
-            >
-            <ul class="mt-8">
-                <li
-                    v-for="(post, i) of data"
-                    :key="i"
-                    class="mb-4 pb-4 border-b-4 border-grey-900 transition duration-500 hover:text-blue-500 hover:translate-x-1"
+        ><template #default="{ data }"> -->
+    <span v-if="isShowCnt">{{ postList.length }} 개의 포스트가 있어요.</span>
+    <ul class="mt-8">
+        <li
+            v-for="(post, i) of postList"
+            :key="i"
+            class="mb-4 pb-4 border-b-4 border-grey-900 transition duration-500 hover:text-blue-500 hover:translate-x-1"
+        >
+            <nuxt-link :to="post._path">
+                <span
+                    class="mr-2 text-gray-500"
+                    v-for="(category, i) of post.categories?.split(' ')"
+                    :key="`post-category-${i}`"
+                    >#{{ category }}</span
                 >
-                    <nuxt-link :to="post._path">
-                        <span
-                            class="mr-2 text-gray-500"
-                            v-for="(category, i) of post.categories?.split(' ')"
-                            :key="`post-category-${i}`"
-                            >#{{ category }}</span
-                        >
-                        <h3 class="font-bold text-xl">
-                            {{ post.title }}
-                        </h3>
-                        <p>{{ post.description }}</p>
-                        <span class="text-sm">{{
-                            convertDate(post.date)
-                        }}</span>
-                    </nuxt-link>
-                </li>
-            </ul>
-        </template>
+                <h3 class="font-bold text-xl">
+                    {{ post.title }}
+                </h3>
+                <p>{{ post.description }}</p>
+                <span class="text-sm">{{ convertDate(post.date) }}</span>
+            </nuxt-link>
+        </li>
+    </ul>
+    <!-- </template>
         <template #not-found>
             <p>No post found.</p>
         </template></ContentQuery
-    >
+    > -->
 </template>
 
 <script setup lang="ts">
@@ -76,7 +72,9 @@ const convertDate = (data: string) => {
     return `${tmp.getFullYear()}-${month}-${date}`;
 };
 
-// const { getPostList } = usePosts();
+const { postState } = usePosts();
+
+const postList = computed(() => postState.value.postList);
 
 // onMounted(async () => {
 //     const test = await getPostList(searchKeyword);
