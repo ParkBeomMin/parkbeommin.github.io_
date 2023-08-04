@@ -22,7 +22,7 @@
             <nuxt-link :to="post._path">
                 <span
                     class="mr-2 text-gray-500"
-                    v-for="(category, i) of post.categories?.split(' ')"
+                    v-for="(category, i) of post.categories?.split?.(' ')"
                     :key="`post-category-${i}`"
                     >#{{ category }}</span
                 >

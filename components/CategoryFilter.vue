@@ -1,5 +1,5 @@
 <template>
-    <ul class="flex mb-8">
+    <ul class="flex mb-8 flex-wrap">
         <li
             v-for="(category, i) of categoryList"
             :key="`category-${i}`"
@@ -22,7 +22,7 @@
 const postList = await queryContent("posts").find();
 console.log(postList);
 const tmpList = postList
-    .flatMap((post) => post.categories?.split(" "))
+    .flatMap((post) => post.categories?.split?.(" "))
     .filter((v) => v);
 const set = new Set(tmpList);
 const categoryList = [...set];
