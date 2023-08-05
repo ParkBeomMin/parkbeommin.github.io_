@@ -13,7 +13,7 @@
                 <p class="mt-4 text-right">{{ getDate(doc.date) }}</p>
             </div>
             <ContentRendererMarkdown
-                class="mt-4 prose"
+                class="mt-4 prose max-w-full"
                 :value="doc"
                 :components="components"
             />
