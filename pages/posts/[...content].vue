@@ -1,6 +1,6 @@
 // https://velog.io/@1-blue/tailwindCss-markdown-%EC%A0%81%EC%9A%A9
 <template>
-    <main class="my-8">
+    <main ref="content" class="my-8">
         <ContentDoc v-slot="{ doc }">
             <div class="pb-4 border-b-2 border-black">
                 <h1 class="font-bold text-3xl">{{ doc.title }}</h1>
@@ -38,6 +38,38 @@ const getDate = (value: string) => {
 };
 
 const components = {};
+
+let content = ref();
+const { setIsShow, setX } = useCat();
+onMounted(() => {
+    window.addEventListener("scroll", () => {
+        console.log("------------content");
+
+        if ((content.value as HTMLElement)?.offsetTop - 64 <= scrollY) {
+            setIsShow(true);
+        } else {
+            setIsShow(false);
+        }
+
+        console.log((content.value as HTMLElement)?.offsetTop);
+        console.log((content.value as HTMLElement)?.scrollTop);
+        console.log((content.value as HTMLElement)?.clientTop);
+        console.log(window.scrollY);
+
+        console.log((content.value as HTMLElement)?.offsetHeight);
+        console.log((content.value as HTMLElement)?.scrollHeight);
+        console.log((content.value as HTMLElement)?.clientHeight);
+
+        const progress =
+            ((window.scrollY - (content.value as HTMLElement)?.offsetTop) /
+                ((content.value as HTMLElement)?.scrollHeight - 256 - 144)) *
+            100;
+
+        setX(progress);
+
+        console.log(progress);
+    });
+});
 </script>
 
 <style>
