@@ -7,8 +7,8 @@
             { 'text-white': !isScroll },
         ]"
     >
-        <div class="flex flex-row max-w-5xl w-7/12 m-auto">
-            <h1 class="flex-1">
+        <div class="flex flex-row max-w-5xl w-7/12 m-auto h-full">
+            <h1 class="flex-1 self-center">
                 <nuxt-link to="/">
                     <IconLogo :isScroll="isScroll" />
                 </nuxt-link>
@@ -17,7 +17,7 @@
                 <li
                     v-for="(menu, i) of menuList"
                     :key="`menu-${i}`"
-                    class="mr-2 transition hover:text-blue-400"
+                    class="mr-2 transition hover:text-blue-400 self-center"
                 >
                     <nuxt-link :to="menu.link">{{ menu.text }}</nuxt-link>
                 </li>

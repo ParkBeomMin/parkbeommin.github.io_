@@ -5,11 +5,11 @@
             { 'hover:animate-[strokeBlack_1s_linear]': isScroll },
         ]"
         width="180"
-        height="60"
-        viewBox="0 0 180 60"
+        height="100%"
+        viewBox="0 0 180 100%"
     >
         <text
-            y="30%"
+            y="50%"
             :class="`text-xl animate-[${
                 isScroll ? 'strokeBlack' : 'strokeBlack'
             }_1s_linear]`"
