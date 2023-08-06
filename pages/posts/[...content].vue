@@ -17,6 +17,7 @@
                 :value="doc"
             />
         </ContentDoc>
+        <Comment />
     </main>
 </template>
 
