@@ -1,6 +1,6 @@
 // https://velog.io/@1-blue/tailwindCss-markdown-%EC%A0%81%EC%9A%A9
 <template>
-    <main ref="content" class="my-8">
+    <main ref="contentDoc" class="my-8">
         <ContentDoc v-slot="{ doc }">
             <div class="pb-4 border-b-2 border-black">
                 <h1 class="font-bold text-3xl">{{ doc.title }}</h1>
@@ -40,30 +40,36 @@ const getDate = (value: string) => {
 
 const components = {};
 
-let content = ref();
+let contentDoc = ref();
 const { setIsShow, setX } = useCat();
 onMounted(() => {
     window.addEventListener("scroll", () => {
-        console.log("------------content");
+        console.log(
+            "------------content",
+            contentDoc.value.getBoundingClientRect()
+        );
 
-        if ((content.value as HTMLElement)?.offsetTop - 64 <= scrollY) {
+        if (
+            (contentDoc.value as HTMLElement)?.getBoundingClientRect().y - 64 <=
+            scrollY
+        ) {
             setIsShow(true);
         } else {
             setIsShow(false);
         }
 
-        console.log((content.value as HTMLElement)?.offsetTop);
-        console.log((content.value as HTMLElement)?.scrollTop);
-        console.log((content.value as HTMLElement)?.clientTop);
+        console.log((contentDoc.value as HTMLElement)?.offsetTop);
+        console.log((contentDoc.value as HTMLElement)?.scrollTop);
+        console.log((contentDoc.value as HTMLElement)?.clientTop);
         console.log(window.scrollY);
 
-        console.log((content.value as HTMLElement)?.offsetHeight);
-        console.log((content.value as HTMLElement)?.scrollHeight);
-        console.log((content.value as HTMLElement)?.clientHeight);
+        console.log((contentDoc.value as HTMLElement)?.offsetHeight);
+        console.log((contentDoc.value as HTMLElement)?.scrollHeight);
+        console.log((contentDoc.value as HTMLElement)?.clientHeight);
 
         const progress =
-            ((window.scrollY - (content.value as HTMLElement)?.offsetTop) /
-                ((content.value as HTMLElement)?.scrollHeight - 512 - 288)) *
+            ((window.scrollY - (contentDoc.value as HTMLElement)?.offsetTop) /
+                ((contentDoc.value as HTMLElement)?.scrollHeight - 512 - 288)) *
             100;
 
         setX(progress);
