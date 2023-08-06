@@ -15,7 +15,6 @@
             <ContentRendererMarkdown
                 class="mt-4 prose max-w-full"
                 :value="doc"
-                :components="components"
             />
         </ContentDoc>
     </main>
@@ -79,5 +78,25 @@ h2 {
 }
 a {
     text-decoration: none !important;
+}
+
+pre {
+    background-color: transparent !important;
+    border: 1px solid #1f2937 !important;
+    color: #1f2937 !important;
+}
+
+p > code {
+    border: 1px solid #1f2937 !important;
+    background-color: #1f2937 !important;
+    color: white !important;
+    border-radius: 4px;
+}
+
+p > code::before {
+    display: none;
+}
+p > code::after {
+    display: none;
 }
 </style>

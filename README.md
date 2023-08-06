@@ -82,3 +82,6 @@ https://ordinary-code.tistory.com/25
 달리는 애니메이션
 https://1yoouoo.tistory.com/38
 // https://mylife365.tistory.com/70 // https://kimsangjun.tistory.com/102
+
+마크다운 코드블락 하이라이팅
+https://github.com/nuxt/content/issues/1490

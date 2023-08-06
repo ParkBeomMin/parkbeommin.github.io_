@@ -2,8 +2,9 @@
     <header
         ref="header"
         :class="[
-            `fixed flex h-16 w-full z-50 text-white`,
+            `fixed flex h-16 w-full z-50`,
             { 'bg-white border-b-2 text-black fill-black': isScroll },
+            { 'text-white': !isScroll },
         ]"
     >
         <div class="flex flex-row max-w-5xl w-7/12 m-auto">
@@ -37,7 +38,7 @@
 const menuList = reactive([
     { text: "Home", link: "/" },
     { text: "Posts", link: "/posts" },
-    { text: "AboutMe", link: "/aboutMe" },
+    { text: "AboutMe", link: "https://parkbeommin.github.io/MyPortfolio" },
 ]);
 
 const { catState } = useCat();
