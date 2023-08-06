@@ -17,6 +17,7 @@
                 :value="doc"
             />
         </ContentDoc>
+        <Share />
         <Comment />
     </main>
 </template>
