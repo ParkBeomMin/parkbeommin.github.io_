@@ -37,11 +37,11 @@ export const usePosts = () => {
             return;
         }
         postState.value.categories.push(category);
-        console.log("postState.value.categories", postState.value.categories);
+        // console.log("postState.value.categories", postState.value.categories);
     };
     const getPostList = async ({ limit = 0 }: { limit?: number } = {}) => {
-        console.log(postState.value.keyword.toUpperCase());
-        console.log(postState.value.keyword.toLowerCase());
+        // console.log(postState.value.keyword.toUpperCase());
+        // console.log(postState.value.keyword.toLowerCase());
 
         postState.value.postList = (
             await queryContent("posts")

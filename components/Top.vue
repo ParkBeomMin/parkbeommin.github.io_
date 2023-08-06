@@ -50,20 +50,20 @@ let isScrollDown = ref(true);
 
 onMounted(() => {
     window.addEventListener("scroll", () => {
-        console.log("scroll", window.scrollY);
+        // console.log("scroll", window.scrollY);
 
-        console.log(
-            "(header.value as HTMLElement).clientHeight",
-            (header.value as HTMLElement).clientHeight
-        );
+        // console.log(
+        //     "(header.value as HTMLElement).clientHeight",
+        //     (header.value as HTMLElement).clientHeight
+        // );
 
         const scrollTop = document.querySelector("html")?.scrollTop ?? 0;
         const scrollHeight = document.querySelector("html")?.scrollHeight ?? 0;
         const clientHeight = document.querySelector("html")?.clientHeight ?? 0;
 
-        console.log("scrollTop: ", scrollTop);
-        console.log("clientHeight: ", clientHeight);
-        console.log("scrollHeight: ", scrollHeight);
+        // console.log("scrollTop: ", scrollTop);
+        // console.log("clientHeight: ", clientHeight);
+        // console.log("scrollHeight: ", scrollHeight);
 
         // 아래 수식은 전체 세로폭 중 현재까지 스크롤한 값을 백분률 환산
         // 브라우저 최하단까지 스크롤을 내리면 100%가 됩니다.

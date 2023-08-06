@@ -19,6 +19,7 @@
         </ContentDoc>
         <Share />
         <Comment />
+        <NextPost />
     </main>
 </template>
 
@@ -44,10 +45,10 @@ let contentDoc = ref();
 const { setIsShow, setX } = useCat();
 onMounted(() => {
     window.addEventListener("scroll", () => {
-        console.log(
-            "------------content",
-            contentDoc.value.getBoundingClientRect()
-        );
+        // console.log(
+        //     "------------content",
+        //     contentDoc.value.getBoundingClientRect()
+        // );
 
         if (
             (contentDoc.value as HTMLElement)?.getBoundingClientRect().y - 64 <=
@@ -58,14 +59,14 @@ onMounted(() => {
             setIsShow(false);
         }
 
-        console.log((contentDoc.value as HTMLElement)?.offsetTop);
-        console.log((contentDoc.value as HTMLElement)?.scrollTop);
-        console.log((contentDoc.value as HTMLElement)?.clientTop);
-        console.log(window.scrollY);
+        // console.log((contentDoc.value as HTMLElement)?.offsetTop);
+        // console.log((contentDoc.value as HTMLElement)?.scrollTop);
+        // console.log((contentDoc.value as HTMLElement)?.clientTop);
+        // console.log(window.scrollY);
 
-        console.log((contentDoc.value as HTMLElement)?.offsetHeight);
-        console.log((contentDoc.value as HTMLElement)?.scrollHeight);
-        console.log((contentDoc.value as HTMLElement)?.clientHeight);
+        // console.log((contentDoc.value as HTMLElement)?.offsetHeight);
+        // console.log((contentDoc.value as HTMLElement)?.scrollHeight);
+        // console.log((contentDoc.value as HTMLElement)?.clientHeight);
 
         const progress =
             ((window.scrollY - (contentDoc.value as HTMLElement)?.offsetTop) /
