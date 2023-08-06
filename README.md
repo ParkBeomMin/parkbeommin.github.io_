@@ -72,3 +72,13 @@ Check out the [deployment documentation](https://nuxt.com/docs/getting-started/d
 https://wormwlrm.github.io/
 https://techblog.woowahan.com/11998/
 https://ansohxxn.github.io/index.html
+
+## 참고 자료
+
+로고 애니메이션
+https://chpofo.tistory.com/47
+https://ordinary-code.tistory.com/25
+
+달리는 애니메이션
+https://1yoouoo.tistory.com/38
+// https://mylife365.tistory.com/70 // https://kimsangjun.tistory.com/102

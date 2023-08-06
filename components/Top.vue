@@ -3,11 +3,15 @@
         ref="header"
         :class="[
             `fixed flex h-16 w-full z-50 text-white`,
-            { 'bg-white border-b-2 text-black': isScroll },
+            { 'bg-white border-b-2 text-black fill-black': isScroll },
         ]"
     >
         <div class="flex flex-row max-w-5xl w-7/12 m-auto">
-            <h1 class="flex-1">Beom Log</h1>
+            <h1 class="flex-1">
+                <nuxt-link to="/">
+                    <IconLogo :isScroll="isScroll" />
+                </nuxt-link>
+            </h1>
             <ul class="flex flex-row">
                 <li
                     v-for="(menu, i) of menuList"
