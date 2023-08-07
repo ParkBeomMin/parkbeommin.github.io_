@@ -1,18 +1,12 @@
 <template>
     <div class="border-t-2 my-8 pt-8 text-center">
         <p>끝까지 읽어주셔서 감사합니다.</p>
-        <button
-            ref="shareRef"
-            class="flex my-4 mx-auto hover:animate-bounce"
-            @click="share"
-        >
-            <IconFeather data-feather="share-2" class="mr-4" />포스트 공유하기
-        </button>
+        <button ref="shareRef" class="flex my-4 mx-auto hover:animate-bounce" @click="share"><IconFeather data-feather="share-2" class="mr-4" />포스트 공유하기</button>
     </div>
 </template>
 
 <script setup lang="ts">
-import copy from "copy-to-clipboard";
+import copy from 'copy-to-clipboard';
 const shareRef = ref();
 
 const { showToast } = useToast();
@@ -26,7 +20,7 @@ const share = () => {
     const route = useRoute();
     console.log(route.fullPath);
     copy(`${window.location.host}${route.fullPath}`);
-    showToast({ text: "클립보드에 복사되었습니다." });
+    showToast({ text: '클립보드에 복사되었습니다.' });
 };
 const init = () => {
     // for (let i = particles.length - 1; i--; i > -1) {
@@ -46,15 +40,13 @@ const init = () => {
     requestAnimationFrame(init);
 };
 
-const colors = ["#eb6383", "#fa9191", "#ffe9c5", "#b4f2e1"];
+const colors = ['#eb6383', '#fa9191', '#ffe9c5', '#b4f2e1'];
 const pop = () => {
     for (let i = 0; i < 150; i++) {
-        const p = document.createElement("particule") as any;
+        const p = document.createElement('particule') as any;
         // 시작 위치
         p.x = window.innerWidth * 0.5;
-        p.y =
-            (shareRef.value as HTMLElement).offsetTop +
-            Math.random() * window.innerHeight * 0.3;
+        p.y = (shareRef.value as HTMLElement).offsetTop + Math.random() * window.innerHeight * 0.3;
         // 속도 ?
         p.vel = {
             x: (Math.random() - 0.5) * 10,
@@ -64,8 +56,8 @@ const pop = () => {
         particles.push(p);
         p.style.transform = `translate(${p.x}px, ${p.y}px)`;
         const size = Math.random() * 15 + 5;
-        p.style.width = size + "px";
-        p.style.height = size + "px";
+        p.style.width = size + 'px';
+        p.style.height = size + 'px';
         p.style.background = colors[Math.floor(Math.random() * colors.length)];
         document.body.appendChild(p);
     }

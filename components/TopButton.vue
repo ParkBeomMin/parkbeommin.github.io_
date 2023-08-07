@@ -1,5 +1,5 @@
 <template>
-    <div id="top-button" :class="['fixed right-8 bottom-8 w-16 h-16 z-50 flex', { 'invisible opacity-0': !isShow }]">
+    <div id="top-button" :class="['fixed right-8 bottom-8 w-16 h-16 z-49 flex', { 'invisible opacity-0': !isShow }]">
         <button class="m-auto" @click="goTop"><IconFeather data-feather="arrow-up-circle" /></button>
     </div>
 </template>
