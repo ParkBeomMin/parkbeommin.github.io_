@@ -6,6 +6,7 @@
             <NuxtPage />
         </div>
         <Toast class="pb-36" />
+        <TopButton />
         <Footer />
     </div>
 </template>

@@ -1,12 +1,5 @@
 <template>
-    <header
-        ref="header"
-        :class="[
-            `fixed flex h-16 w-full z-50`,
-            { 'bg-white border-b-2 text-black fill-black': isScroll },
-            { 'text-white': !isScroll },
-        ]"
-    >
+    <header ref="header" :class="[`fixed flex h-16 w-full z-50`, { 'bg-white border-b-2 text-black fill-black': isScroll }, { 'text-white': !isScroll }]">
         <div class="flex flex-row max-w-5xl w-7/12 m-auto h-full">
             <h1 class="flex-1 self-center">
                 <nuxt-link to="/">
@@ -14,11 +7,7 @@
                 </nuxt-link>
             </h1>
             <ul class="flex flex-row">
-                <li
-                    v-for="(menu, i) of menuList"
-                    :key="`menu-${i}`"
-                    class="mr-2 transition hover:text-blue-400 self-center"
-                >
+                <li v-for="(menu, i) of menuList" :key="`menu-${i}`" class="mr-2 transition hover:text-blue-400 self-center">
                     <nuxt-link :to="menu.link">{{ menu.text }}</nuxt-link>
                 </li>
             </ul>
@@ -27,7 +16,7 @@
             ref="cat"
             :class="[
                 { hidden: !catState.isShow },
-                { '-scale-x-50': isScrollDown },
+                { '-scale-x-50': isScrollDown && !catState.isBack },
                 `scale-50 bg-[url(~/assets/cats.png)] bg-no-repeat absolute w-[112px] h-32 animate-[run_1s_steps(10)_infinite]`,
             ]"
         ></div>
@@ -36,12 +25,12 @@
 
 <script setup lang="ts">
 const menuList = reactive([
-    { text: "Home", link: "/" },
-    { text: "Posts", link: "/posts" },
-    { text: "AboutMe", link: "https://parkbeommin.github.io/MyPortfolio" },
+    { text: 'Home', link: '/' },
+    { text: 'Posts', link: '/posts' },
+    { text: 'AboutMe', link: 'https://parkbeommin.github.io/MyPortfolio' },
 ]);
 
-const { catState } = useCat();
+const { catState, setIsBack } = useCat();
 
 let isScroll = ref(false);
 const header = ref();
@@ -49,7 +38,7 @@ let cat = ref();
 let isScrollDown = ref(true);
 
 onMounted(() => {
-    window.addEventListener("scroll", () => {
+    window.addEventListener('scroll', () => {
         // console.log("scroll", window.scrollY);
 
         // console.log(
@@ -57,9 +46,9 @@ onMounted(() => {
         //     (header.value as HTMLElement).clientHeight
         // );
 
-        const scrollTop = document.querySelector("html")?.scrollTop ?? 0;
-        const scrollHeight = document.querySelector("html")?.scrollHeight ?? 0;
-        const clientHeight = document.querySelector("html")?.clientHeight ?? 0;
+        const scrollTop = document.querySelector('html')?.scrollTop ?? 0;
+        const scrollHeight = document.querySelector('html')?.scrollHeight ?? 0;
+        const clientHeight = document.querySelector('html')?.clientHeight ?? 0;
 
         // console.log("scrollTop: ", scrollTop);
         // console.log("clientHeight: ", clientHeight);
@@ -78,8 +67,11 @@ onMounted(() => {
         }
     });
 
-    window.addEventListener("wheel", (e: WheelEvent) => {
+    window.addEventListener('wheel', (e: WheelEvent) => {
         isScrollDown.value = e.deltaY > 0;
+        if (isScrollDown.value) {
+            setIsBack(false);
+        }
     });
 });
 </script>
