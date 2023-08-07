@@ -60,7 +60,9 @@ onMounted(() => {
 
         const progress = ((window.scrollY - (contentDoc.value as HTMLElement)?.offsetTop) / ((contentDoc.value as HTMLElement)?.scrollHeight - 512 - 288)) * 100;
 
-        setX(progress);
+        if (progress) {
+            setX(progress);
+        }
 
         console.log(progress);
     });

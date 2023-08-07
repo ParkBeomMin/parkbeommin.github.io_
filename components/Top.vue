@@ -58,9 +58,12 @@ onMounted(() => {
         // 브라우저 최하단까지 스크롤을 내리면 100%가 됩니다.
         const progress = ((scrollTop + clientHeight) / scrollHeight) * 100;
 
-        (cat.value as HTMLElement).style.left = `${catState.value.x}%`;
+        if (cat.value) {
+            console.log('cat.value', cat.value);
 
-        if (window.scrollY <= (header.value as HTMLElement).offsetHeight) {
+            (cat.value as HTMLElement).style.left = `${catState.value.x}%`;
+        }
+        if (window.scrollY <= (header.value as HTMLElement)?.offsetHeight) {
             isScroll.value = false;
         } else {
             isScroll.value = true;
