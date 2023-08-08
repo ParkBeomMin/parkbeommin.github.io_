@@ -42,32 +42,41 @@ export const usePosts = () => {
     const getPostList = async ({ limit = 0 }: { limit?: number } = {}) => {
         // console.log(postState.value.keyword.toUpperCase());
         // console.log(postState.value.keyword.toLowerCase());
+        const route = useRoute();
 
-        postState.value.postList = (
-            await queryContent("posts")
-                .where({
-                    title: {
-                        $contains: [postState.value.keyword],
-                    },
-                    categories: {
-                        $contains: [...postState.value.categories],
-                    },
-                })
-                .sort({ date: -1 })
-                .limit(limit)
-                .find()
-        ).map((post: any) => ({
-            title: post.title,
-            description: post.description,
-            categories: post.categories,
-            date: post.date,
-            _path: post._path,
-        }));
+        // remove trailing slash from path
+        const actualPath = route.path.replace(/\/$/, "");
+        const data =
+            // await useAsyncData(`posts-${actualPath}`, async () => {
+            (
+                await queryContent("/posts/")
+                    .where({
+                        title: {
+                            $contains: [postState.value.keyword],
+                        },
+                        categories: {
+                            $contains: [...postState.value.categories],
+                        },
+                    })
+                    .sort({ date: -1 })
+                    .limit(limit)
+                    .find()
+            ).map((post: any) => ({
+                title: post.title,
+                description: post.description,
+                categories: post.categories,
+                date: post.date,
+                _path: post._path,
+            }));
         // .sort((a: any, b: any) => {
         //     const aDate = new Date(a.date);
         //     const bDate = new Date(b.date);
         //     return bDate.getTime() - aDate.getTime();
         // });
+        // });
+        console.log(data);
+
+        postState.value.postList = data as any;
     };
 
     return { postState, getPostList, setCategory, resetFilter };

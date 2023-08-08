@@ -6,7 +6,7 @@
         ]"
         width="180"
         height="100%"
-        viewBox="0 0 180 100%"
+        viewBox="0 0 180 100"
     >
         <text
             y="50%"

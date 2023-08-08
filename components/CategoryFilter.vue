@@ -19,11 +19,12 @@
 </template>
 
 <script setup lang="ts">
-const postList = await queryContent("posts").find();
+const postList = await queryContent("/posts/").find();
+
 // console.log(postList);
 const tmpList = postList
-    .flatMap((post) => post.categories?.split?.(" "))
-    .filter((v) => v);
+    .flatMap((post: any) => post.categories?.split?.(" "))
+    .filter((v: any) => v);
 const set = new Set(tmpList);
 const categoryList = [...set];
 // console.log(categoryList);
