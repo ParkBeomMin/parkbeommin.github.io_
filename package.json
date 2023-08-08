@@ -7,7 +7,7 @@
         "generate": "nuxt generate",
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
-        "deploy": "push-dir --dir=dist --branch=master --cleanup"
+        "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
     },
     "devDependencies": {
         "@nuxt/content": "^2.7.2",
