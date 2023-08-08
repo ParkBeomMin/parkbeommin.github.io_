@@ -8,10 +8,10 @@ export default defineNuxtConfig({
             theme: 'github-light',
         },
         documentDriven: true,
-        experimental: {
-            clientDB: true,
-            stripQueryParameters: true,
-        },
+        // experimental: {
+        //     clientDB: true,
+        //     stripQueryParameters: true,
+        // },
     },
 
     gtag: {
