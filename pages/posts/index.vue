@@ -6,13 +6,17 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({
+    title: 'Beom Log | Posts',
+    ogTitle: 'Beom Log | Posts',
+    description: '프론트엔드 기술블로그 입니다.',
+    ogDescription: '프론트엔드 기술블로그 입니다.',
+    ogImage: '/assets/banner.png',
+});
 useHead({
     title: 'Beom Log | Posts',
     meta: [
-        { name: 'description', content: '프론트엔드 기술블로그 입니다.' },
-        { name: 'og:description', content: '프론트엔드 기술블로그 입니다.' },
         { name: 'keywords', content: '기술블로그, JavaScript, Vue, Nuxt, FrontEnd, 프론트엔드' },
-        { name: 'og:image', content: '/assets/banner.png' },
         { name: 'robots', content: 'index, follow' },
     ],
 });

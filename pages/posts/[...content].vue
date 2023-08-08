@@ -17,12 +17,14 @@
 
 <script setup lang="ts">
 const { page } = useContent();
+useSeoMeta({
+    description: page.value.description,
+    ogDescription: page.value.description,
+    ogImage: page.value.thumbnail ?? '/assets/banner.png',
+});
 useHead({
     meta: [
-        { name: 'description', content: page.value.description },
-        { name: 'og:description', content: page.value.description },
         { name: 'keywords', content: page.value.categories?.split(' ').join(', ') },
-        { name: 'og:image', content: page.value.thumbnail ?? '/assets/banner.png' },
         { name: 'robots', content: 'index, follow' },
     ],
 });

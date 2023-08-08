@@ -10,3 +10,11 @@
         <TopButton />
     </div>
 </template>
+
+<script setup lang="ts">
+// Import the functions you need from the SDKs you need
+
+// } catch (e) {
+//     console.warn(e);
+// }
+</script>
