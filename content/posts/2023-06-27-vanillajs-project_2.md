@@ -53,7 +53,7 @@ id를 통해 링크가 생성되며 링크를 친구들에게 공유하여 나�
 생성 버튼을 누르면 비밀번호를 입력할 수 있는 레이어가 노출됩니다.  
 그리고 뒷 배경으로 모든 사용자의 입력 값을 예시로 보여지도록 합니다.
 
-```New.js
+```js
 import AboutMe from "@/components/AboutMe";
 import PasswordLayer from "../components/PasswordLayer.js";
 
@@ -87,7 +87,7 @@ export default class New {
 button에는 click이벤트를 넣어주고 클릭 시 PasswordLayer가 랜딩될 수 있도록 구현합니다.  
 그리고 AboutMe 컴포넌트도 new라는 id를 넘겨주고 랜더링 시켜줍니다.
 
-```PasswordLayer.js
+```js
 export default class PasswordLayer {
     constructor({ $target, callback }) {
         this.$target = $target;
@@ -156,7 +156,7 @@ callback 함수를 인자로 받아서 레이어가 생성되도록 해서 레�
 
 `pages/About.js`, `components/PasswordLayer.js`
 
-```About.js
+```js
 import PasswordLayer from '../components/PasswordLayer.js';
 export default class About {
     constructor({ $target }) {
@@ -236,7 +236,7 @@ export default class About {
 
 `pages/Home.js` `components/AboutMe.js` `components/Header.js` `components/MoneyLayer.js`
 
-```Home.js
+```js
 // Home.js
 import AboutMe from "../components/AboutMe.js";
 import Header from "@/components/Header";
@@ -256,7 +256,7 @@ export default class Home {
 메인 페이지는 Header.js와 AboutMe.js 컴포넌트로 구성됩니다.  
 Header.js에는 기부하기와 공유하기 기능이 있고, AboutMe.js에는 사용자의 새싹과 입력받은 문자들을 노출해주는 기능이 있습니다.
 
-```AboutMe.js
+```js
 // AboutMe.js
 export default class AboutMe {
     constructor({ $target, id }) {
@@ -320,7 +320,7 @@ aboutList는 친구들에게 입력받은 나에 대한 문장/문구들이 담�
 미리 저장해둔 경로에 맞게 새싹 이미지를 불러오도록 하고 사이즈와 필터도 지정해줍니다. svg파일을 img태그로 지정해놓았기때문에 색상 변동을 filter로 컨트롤합니다.  
 aboutList의 결과값들도 만들어줍니다. 하늘에서 비처럼 떨어지는 애니메이션효과를 css로 주고, 각 요소마다 속도 차이를 주기 위해 랜덤하게 생성될 수 있도록 합니다.
 
-```Header.js
+```js
 // Header.js
 import MoneyLayer from './MoneyLayer';
 
@@ -363,7 +363,7 @@ Header에는 버튼을 2개 만들고, 각 이미지를 지정해줍니다.
 share버튼의 클릭 이벤트를 만들어주고 추후에 링크가 복사될 수 있도록 구현할 예정입니다.  
 money버튼은 기부를 할 수 있는 레이어를 띄우는 역할로 클릭 이벤트로 MoneyLayer가 노출될 수 있도록 합니다.
 
-```MoneyLayer.js
+```js
 // MoneyLayer.js
 export default class MoneyLayer {
     constructor({ $target }) {

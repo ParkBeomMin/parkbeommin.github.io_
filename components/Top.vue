@@ -59,7 +59,7 @@ onMounted(() => {
         const progress = ((scrollTop + clientHeight) / scrollHeight) * 100;
 
         if (cat.value) {
-            console.log('cat.value', cat.value);
+            // console.log('cat.value', cat.value);
 
             (cat.value as HTMLElement).style.left = `${catState.value.x}%`;
         }

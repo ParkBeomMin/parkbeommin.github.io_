@@ -77,7 +77,7 @@ onMounted(() => {
             setX(progress);
         }
 
-        console.log(progress);
+        // console.log(progress);
     });
 });
 </script>

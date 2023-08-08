@@ -20,13 +20,13 @@
 
 <script setup lang="ts">
 const postList = await queryContent("posts").find();
-console.log(postList);
+// console.log(postList);
 const tmpList = postList
     .flatMap((post) => post.categories?.split?.(" "))
     .filter((v) => v);
 const set = new Set(tmpList);
 const categoryList = [...set];
-console.log(categoryList);
+// console.log(categoryList);
 const { postState, setCategory, getPostList } = usePosts();
 
 const getIsSelected = (category: string) => {

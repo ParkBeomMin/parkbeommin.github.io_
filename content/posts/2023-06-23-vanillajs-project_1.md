@@ -42,7 +42,7 @@ Vanilla JS에 익숙해지기 위해 프로젝트를 시작했습니다.
 먼저 index.html 파일에 SPA로 동작하기 위한 js파일을 삽입해줍니다.  
 그리고 동작을 컨트롤할 수 있도록 div 태그에 app이라는 id를 지정해줍니다.
 
-```index.html
+```html
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -60,7 +60,7 @@ Vanilla JS에 익숙해지기 위해 프로젝트를 시작했습니다.
 
 이제 app.js에 SPA가 되도록 코드를 작성해줍니다.
 
-```app.js
+```js
 export default class App {
     constructor({ $target }) {
         this.$target = $target;
@@ -76,7 +76,7 @@ export default class App {
 
 index.js에서 app.jss가 html에 붙을 수 있도록 해줍니다.
 
-```index.js
+```js
 import App from "./App.js";
 new App({ $target: document.querySelector("#app") }).render();
 ```
@@ -94,7 +94,7 @@ npm install serve
 
 serve 패키지가 install되고나면 package.json에 명령어 스크립트를 추가해줍니다.
 
-```package.json
+```json
 {
     "name": "aboutme",
     "version": "1.0.0",

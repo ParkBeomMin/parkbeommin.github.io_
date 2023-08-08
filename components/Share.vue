@@ -18,7 +18,7 @@ onMounted(() => {
 const share = () => {
     pop();
     const route = useRoute();
-    console.log(route.fullPath);
+    // console.log(route.fullPath);
     copy(`${window.location.host}${route.fullPath}`);
     showToast({ text: '클립보드에 복사되었습니다.' });
 };
