@@ -14,8 +14,14 @@ export default defineNuxtConfig({
         },
     },
     nitro: {
-        prerender: { crawlLinks: true },
+        prerender: {
+            routes: ["/posts/**"],
+            crawlLinks: true,
+        },
     },
+    // nitro: {
+    //     prerender: { crawlLinks: true },
+    // },
 
     gtag: {
         id: "G-44YWDK9DBE",
