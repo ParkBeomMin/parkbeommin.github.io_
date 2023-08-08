@@ -16,7 +16,8 @@
     "@types/feather-icons": "^4.29.1",
     "@types/node": "^18.17.1",
     "nuxt": "^3.6.5",
-    "nuxt-gtag": "^0.5.7"
+    "nuxt-gtag": "^0.5.7",
+    "sitemap": "^7.1.1"
   },
   "volta": {
     "node": "16.14.0",

@@ -17,4 +17,10 @@ export default defineNuxtConfig({
     gtag: {
         id: 'G-44YWDK9DBE',
     },
+
+    nitro: {
+        prerender: {
+            routes: ['/sitemap.xml'],
+        },
+    },
 });
