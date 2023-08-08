@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     },
     nitro: {
         prerender: {
-            routes: ["/posts/**"],
+            // rouztes: ["/posts/**"],
             crawlLinks: true,
         },
     },
@@ -30,6 +30,6 @@ export default defineNuxtConfig({
     routeRules: {
         "/": { prerender: false },
         "/posts": { prerender: false },
-        "/posts/**": { ssr: false },
+        "/posts/**": { ssr: false, prerender: false },
     },
 });
