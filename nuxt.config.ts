@@ -10,7 +10,7 @@ export default defineNuxtConfig({
         documentDriven: true,
         experimental: {
             clientDB: true,
-            stripQueryParameters: true,
+            stripQueryParameters: false,
         },
     },
     nitro: {
@@ -28,7 +28,8 @@ export default defineNuxtConfig({
     },
     // nitro: {},
     routeRules: {
-        "/**": { prerender: true },
+        "/": { prerender: false },
+        "/posts": { prerender: false },
         "/posts/**": { ssr: false },
     },
 });
