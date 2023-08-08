@@ -13,6 +13,9 @@ export default defineNuxtConfig({
             stripQueryParameters: true,
         },
     },
+    nitro: {
+        prerender: { crawlLinks: true },
+    },
 
     gtag: {
         id: "G-44YWDK9DBE",
