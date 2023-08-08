@@ -73,7 +73,7 @@ export const usePosts = () => {
             //     return bDate.getTime() - aDate.getTime();
         });
         // });
-        console.log(data);
+        console.log("data", data.value);
 
         postState.value.postList = data.value as any;
     };

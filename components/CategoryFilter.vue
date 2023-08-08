@@ -22,7 +22,7 @@
 const { data } = await useAsyncData("tst", async () => {
     return await queryContent("/posts/").find();
 });
-console.log("data", data);
+console.log("data11", data.value);
 
 const postList = data.value as any;
 // console.log(postList);
