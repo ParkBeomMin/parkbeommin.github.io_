@@ -19,8 +19,12 @@
 </template>
 
 <script setup lang="ts">
-const postList = await queryContent("/posts/").find();
+const { data } = await useAsyncData("tst", async () => {
+    return await queryContent("/posts/").find();
+});
+console.log("data", data);
 
+const postList = data.value as any;
 // console.log(postList);
 const tmpList = postList
     .flatMap((post: any) => post.categories?.split?.(" "))

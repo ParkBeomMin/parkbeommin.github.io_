@@ -46,9 +46,8 @@ export const usePosts = () => {
 
         // remove trailing slash from path
         const actualPath = route.path.replace(/\/$/, "");
-        const data =
-            // await useAsyncData(`posts-${actualPath}`, async () => {
-            (
+        const { data } = await useAsyncData(`posts-${actualPath}`, async () => {
+            return (
                 await queryContent("/posts/")
                     .where({
                         title: {
@@ -68,15 +67,15 @@ export const usePosts = () => {
                 date: post.date,
                 _path: post._path,
             }));
-        // .sort((a: any, b: any) => {
-        //     const aDate = new Date(a.date);
-        //     const bDate = new Date(b.date);
-        //     return bDate.getTime() - aDate.getTime();
-        // });
+            // .sort((a: any, b: any) => {
+            //     const aDate = new Date(a.date);
+            //     const bDate = new Date(b.date);
+            //     return bDate.getTime() - aDate.getTime();
+        });
         // });
         console.log(data);
 
-        postState.value.postList = data as any;
+        postState.value.postList = data.value as any;
     };
 
     return { postState, getPostList, setCategory, resetFilter };
