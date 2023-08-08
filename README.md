@@ -91,3 +91,6 @@ https://velog.io/@outstandingboy/Github-%EB%B8%94%EB%A1%9C%EA%B7%B8%EC%97%90-%EB
 
 폭죽
 https://wwendy.tistory.com/1005
+
+sitemap
+https://content.nuxtjs.org/guide/recipes/sitemap
