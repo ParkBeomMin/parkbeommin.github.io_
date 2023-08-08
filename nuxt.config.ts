@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     gtag: {
         id: "G-44YWDK9DBE",
     },
-    nitro: {},
+    // nitro: {},
     routeRules: {
         "/**": { prerender: true },
         "/posts/**": { ssr: false },
