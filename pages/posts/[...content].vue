@@ -16,6 +16,17 @@
 </template>
 
 <script setup lang="ts">
+const { page } = useContent();
+useHead({
+    meta: [
+        { name: 'description', content: page.value.description },
+        { name: 'og:description', content: page.value.description },
+        { name: 'keywords', content: page.value.categories?.split(' ').join(', ') },
+        { name: 'og:image', content: page.value.thumbnail ?? '/assets/banner.png' },
+        { name: 'robots', content: 'index, follow' },
+    ],
+});
+
 const getDate = (value: string) => {
     try {
         const tmp = new Date(value);

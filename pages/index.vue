@@ -8,9 +8,9 @@
 useHead({
     title: 'Beom Log',
     meta: [
-        { name: 'description', content: '' },
-        { name: 'og:description', content: '' },
-        { name: 'keywords', content: '기술블로그' },
+        { name: 'description', content: '프론트엔드 기술블로그 입니다.' },
+        { name: 'og:description', content: '프론트엔드 기술블로그 입니다.' },
+        { name: 'keywords', content: '기술블로그, JavaScript, Vue, Nuxt, FrontEnd, 프론트엔드' },
         { name: 'og:image', content: '/assets/banner.png' },
         { name: 'robots', content: 'index, follow' },
     ],
