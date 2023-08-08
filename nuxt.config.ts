@@ -19,6 +19,10 @@ export default defineNuxtConfig({
     },
 
     nitro: {
+        routeRules: {
+            '/': { static: true },
+            '/posts/**': { static: true },
+        },
         prerender: {
             routes: ['/sitemap.xml'],
         },
