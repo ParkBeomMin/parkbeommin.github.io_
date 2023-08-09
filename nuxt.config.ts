@@ -2,10 +2,10 @@
 export default defineNuxtConfig({
     ssr: false,
     devtools: { enabled: true },
-    modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "nuxt-gtag"],
+    modules: ['@nuxt/content', '@nuxtjs/tailwindcss', 'nuxt-gtag'],
     content: {
         highlight: {
-            theme: "github-light",
+            theme: 'github-light',
         },
         documentDriven: true,
         experimental: {
@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     nitro: {
         prerender: {
             // rouztes: ["/posts/**"],
-            crawlLinks: true,
+            crawlLinks: false,
         },
     },
     // nitro: {
@@ -24,12 +24,12 @@ export default defineNuxtConfig({
     // },
 
     gtag: {
-        id: "G-44YWDK9DBE",
+        id: 'G-44YWDK9DBE',
     },
     // nitro: {},
     routeRules: {
-        "/": { prerender: false },
-        "/posts": { prerender: false },
-        "/posts/**": { ssr: false, prerender: false },
+        '/': { prerender: false },
+        '/posts': { prerender: false },
+        '/posts/**': { ssr: false, prerender: false },
     },
 });
