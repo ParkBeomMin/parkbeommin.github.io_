@@ -16,7 +16,9 @@ export default defineNuxtConfig({
     nitro: {
         prerender: {
             // rouztes: ["/posts/**"],
-            crawlLinks: false,
+
+            crawlLinks: true,
+            failOnError: false,
         },
     },
     // nitro: {
