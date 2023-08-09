@@ -19,6 +19,7 @@ export default defineNuxtConfig({
 
             crawlLinks: true,
             failOnError: false,
+            ignore: ['/posts'],
         },
     },
     // nitro: {
