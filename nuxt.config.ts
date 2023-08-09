@@ -7,7 +7,7 @@ export default defineNuxtConfig({
         highlight: {
             theme: 'github-light',
         },
-        documentDriven: true,
+        documentDriven: false,
         experimental: {
             clientDB: true,
             stripQueryParameters: false,
