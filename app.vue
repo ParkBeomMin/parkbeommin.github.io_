@@ -17,4 +17,12 @@
 // } catch (e) {
 //     console.warn(e);
 // }
+const { resetFilter } = usePosts();
+const router = useRouter();
+router.beforeEach((to, from, next) => {
+    if (to.path === "/") {
+        resetFilter();
+    }
+    next();
+});
 </script>

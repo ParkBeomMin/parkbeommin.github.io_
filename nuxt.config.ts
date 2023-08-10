@@ -1,6 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    ssr: false,
     devtools: { enabled: true },
     modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "nuxt-gtag"],
     content: {
@@ -13,23 +12,12 @@ export default defineNuxtConfig({
             stripQueryParameters: false,
         },
     },
-    nitro: {
-        prerender: {
-            // rouztes: ["/posts/**"],
-            crawlLinks: true,
-        },
-    },
+
     // nitro: {
     //     prerender: { crawlLinks: true },
     // },
 
     gtag: {
         id: "G-44YWDK9DBE",
-    },
-    // nitro: {},
-    routeRules: {
-        "/": { prerender: false },
-        "/posts": { prerender: false },
-        "/posts/**": { ssr: false, prerender: false },
     },
 });

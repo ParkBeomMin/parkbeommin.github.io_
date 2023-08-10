@@ -28,6 +28,8 @@
     "dependencies": {
         "copy-to-clipboard": "^3.3.3",
         "feather-icons": "^4.29.0",
-        "firebase": "^10.1.0"
+        "firebase": "^10.1.0",
+        "firebase-admin": "^11.10.1",
+        "firebase-functions": "^4.4.1"
     }
 }
