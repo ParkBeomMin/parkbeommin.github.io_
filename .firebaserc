@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "forestvue-8424e"
+  },
+  "targets": {
+    "forestvue-8424e": {
+      "hosting": {
+        "beomLog": [
+          "beom-log"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
