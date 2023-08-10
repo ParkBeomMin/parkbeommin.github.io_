@@ -46,7 +46,7 @@ export const usePosts = () => {
             // await useAsyncData(`posts-${actualPath}`, async () => {
             //return
             (
-                await queryContent("posts")
+                await queryContent("/posts/")
                     .where({
                         title: {
                             $contains: [postState.value.keyword],
