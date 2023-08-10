@@ -1,7 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     devtools: { enabled: true },
-    modules: ["@nuxt/content", "@nuxtjs/tailwindcss", "nuxt-gtag"],
+    modules: [
+        "@nuxt/content",
+        "@nuxtjs/tailwindcss",
+        "nuxt-gtag",
+        [
+            "@nuxtjs/google-adsense",
+            {
+                id: "",
+            },
+        ],
+    ],
     content: {
         highlight: {
             theme: "github-light",

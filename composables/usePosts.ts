@@ -40,7 +40,7 @@ export const usePosts = () => {
         // console.log("postState.value.categories", postState.value.categories);
     };
     const getPostList = async ({ limit = 0 }: { limit?: number } = {}) => {
-        console.log("getPost!", limit);
+        // console.log("getPost!", limit);
 
         postState.value.postList =
             // await useAsyncData(`posts-${actualPath}`, async () => {
@@ -71,7 +71,7 @@ export const usePosts = () => {
         //     return bDate.getTime() - aDate.getTime();
         //});//
         // });
-        console.log(postState.value.postList);
+        // console.log(postState.value.postList);
 
         // postState.value.postList = data.value as any;
     };
