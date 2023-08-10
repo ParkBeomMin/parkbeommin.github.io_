@@ -23,9 +23,11 @@ export default defineNuxtConfig({
         },
     },
 
-    // nitro: {
-    //     prerender: { crawlLinks: true },
-    // },
+    nitro: {
+        prerender: {
+            routes: ["/sitemap.xml"],
+        },
+    },
 
     gtag: {
         id: "G-44YWDK9DBE",
