@@ -13,16 +13,19 @@ definePageMeta({
 });
 
 useSeoMeta({
-    title: 'Beom Log',
-    ogTitle: 'Beom Log',
-    description: '프론트엔드 기술블로그 입니다.',
-    ogDescription: '프론트엔드 기술블로그 입니다.',
-    ogImage: '/assets/banner.png',
+    title: "Beom Log",
+    ogTitle: "Beom Log",
+    description: "프론트엔드 기술블로그 입니다.",
+    ogDescription: "프론트엔드 기술블로그 입니다.",
+    ogImage: "/assets/banner.png",
 });
 useHead({
     meta: [
-        { name: 'keywords', content: '기술블로그, JavaScript, Vue, Nuxt, FrontEnd, 프론트엔드' },
-        { name: 'robots', content: 'index, follow' },
+        {
+            name: "keywords",
+            content: "기술블로그, JavaScript, Vue, Nuxt, FrontEnd, 프론트엔드",
+        },
+        { name: "robots", content: "index, follow" },
     ],
 });
 

@@ -1,0 +1,21 @@
+{
+    "functions": [
+        {
+            "prebuild": "npm install",
+            "source": ".output/server",
+            "runtime": "nodejs16",
+            "codebase": "default"
+        }
+    ],
+    "hosting": {
+        "target": "beomLog",
+        "public": ".output/public",
+        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+        "rewrites": [
+            {
+                "source": "**",
+                "function": "server"
+            }
+        ]
+    }
+}

@@ -36,7 +36,7 @@ onMounted(() => {
 });
 
 const getDate = () => {
-    const startDate = new Date("2023/08/03 16:39:00");
+    const startDate = new Date("2023/08/10 22:30:00");
     const curDate = new Date();
     const diff = curDate.getTime() - startDate.getTime();
     const diffDate = Math.floor(diff / (24 * 60 * 60 * 1000));

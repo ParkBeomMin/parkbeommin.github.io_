@@ -19,10 +19,10 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useAsyncData("tst", async () => {
+const { data } = await useAsyncData("category", async () => {
     return await queryContent("/posts/").find();
 });
-console.log("data11", data.value);
+// console.log("data11", data.value);
 
 const postList = data.value as any;
 // console.log(postList);

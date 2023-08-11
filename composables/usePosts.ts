@@ -40,14 +40,12 @@ export const usePosts = () => {
         // console.log("postState.value.categories", postState.value.categories);
     };
     const getPostList = async ({ limit = 0 }: { limit?: number } = {}) => {
-        // console.log(postState.value.keyword.toUpperCase());
-        // console.log(postState.value.keyword.toLowerCase());
-        const route = useRoute();
+        // console.log("getPost!", limit);
 
-        // remove trailing slash from path
-        const actualPath = route.path.replace(/\/$/, "");
-        const { data } = await useAsyncData(`posts-${actualPath}`, async () => {
-            return (
+        postState.value.postList =
+            // await useAsyncData(`posts-${actualPath}`, async () => {
+            //return
+            (
                 await queryContent("/posts/")
                     .where({
                         title: {
@@ -67,15 +65,15 @@ export const usePosts = () => {
                 date: post.date,
                 _path: post._path,
             }));
-            // .sort((a: any, b: any) => {
-            //     const aDate = new Date(a.date);
-            //     const bDate = new Date(b.date);
-            //     return bDate.getTime() - aDate.getTime();
-        });
+        // .sort((a: any, b: any) => {
+        //     const aDate = new Date(a.date);
+        //     const bDate = new Date(b.date);
+        //     return bDate.getTime() - aDate.getTime();
+        //});//
         // });
-        console.log("data", data.value);
+        // console.log(postState.value.postList);
 
-        postState.value.postList = data.value as any;
+        // postState.value.postList = data.value as any;
     };
 
     return { postState, getPostList, setCategory, resetFilter };

@@ -76,6 +76,7 @@ const { postState, getPostList } = usePosts();
 
 const postList = computed(() => postState.value.postList);
 
+await useAsyncData("posts", async () => {});
 onMounted(async () => {
     await getPostList({ limit });
 });

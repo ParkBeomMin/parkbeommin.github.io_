@@ -12,9 +12,21 @@
 </template>
 
 <script setup lang="ts">
-// Import the functions you need from the SDKs you need
-
-// } catch (e) {
-//     console.warn(e);
-// }
+useHead({
+    script: [
+        {
+            src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7426857657290789",
+            crossorigin: "anonymous",
+            async: true,
+        },
+    ],
+});
+const { resetFilter } = usePosts();
+const router = useRouter();
+router.beforeEach((to, from, next) => {
+    if (to.path === "/") {
+        resetFilter();
+    }
+    next();
+});
 </script>
