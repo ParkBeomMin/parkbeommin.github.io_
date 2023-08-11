@@ -12,6 +12,7 @@ export default defineEventHandler(async (event) => {
         sitemap.write({
             url: doc._path,
             changefreq: 'monthly',
+            lastmod: doc.date ?? new Date(),
         });
     }
     sitemap.end();
