@@ -5,6 +5,13 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+    documentDriven: {
+        page: false,
+        // Keep page fetching enabled surround: false // Disable surround fetching
+    },
+});
+
 useSeoMeta({
     title: "Beom Log",
     ogTitle: "Beom Log",

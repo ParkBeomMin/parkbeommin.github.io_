@@ -2,19 +2,19 @@
 export default defineNuxtConfig({
     devtools: { enabled: true },
     modules: [
-        "@nuxt/content",
-        "@nuxtjs/tailwindcss",
-        "nuxt-gtag",
+        '@nuxt/content',
+        '@nuxtjs/tailwindcss',
+        'nuxt-gtag',
         [
-            "@nuxtjs/google-adsense",
+            '@nuxtjs/google-adsense',
             {
-                id: "",
+                id: '',
             },
         ],
     ],
     content: {
         highlight: {
-            theme: "github-light",
+            theme: 'github-light',
         },
         documentDriven: true,
         experimental: {
@@ -25,11 +25,11 @@ export default defineNuxtConfig({
 
     nitro: {
         prerender: {
-            routes: ["/sitemap.xml"],
+            routes: ['/sitemap.xml'],
         },
     },
 
     gtag: {
-        id: "G-44YWDK9DBE",
+        id: 'G-44YWDK9DBE',
     },
 });
