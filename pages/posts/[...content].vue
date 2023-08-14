@@ -10,8 +10,10 @@
             <ContentRendererMarkdown class="mt-4 prose max-w-full keepall" :value="convertImgPath(doc)" />
         </ContentDoc>
         <Share />
+        <KakaoBannerLong />
         <Comment />
         <NextPost />
+        <KakaoBannerBox />
     </main>
 </template>
 
