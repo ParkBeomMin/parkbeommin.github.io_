@@ -1,21 +1,6 @@
 <template>
-    <svg
-        :class="[
-            { 'fill-white hover:animate-[stroke_1s_linear]': !isScroll },
-            { 'hover:animate-[strokeBlack_1s_linear]': isScroll },
-        ]"
-        width="180"
-        height="100%"
-        viewBox="0 0 180 100"
-    >
-        <text
-            y="50%"
-            :class="`text-xl animate-[${
-                isScroll ? 'strokeBlack' : 'strokeBlack'
-            }_1s_linear]`"
-        >
-            Beom Log
-        </text>
+    <svg :class="[{ 'fill-white hover:animate-[stroke_1s_linear]': !isScroll }, { 'hover:animate-[strokeBlack_1s_linear]': isScroll }]" width="100%">
+        <text y="50%" :class="`md:text-xl text-sm animate-[${isScroll ? 'strokeBlack' : 'strokeBlack'}_1s_linear]`">Beom Log</text>
     </svg>
 </template>
 
