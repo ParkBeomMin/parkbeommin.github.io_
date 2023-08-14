@@ -110,4 +110,8 @@ p > code::before {
 p > code::after {
     display: none;
 }
+
+img {
+    margin: auto;
+}
 </style>
