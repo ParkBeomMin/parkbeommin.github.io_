@@ -6,8 +6,8 @@
         "build:firebase": "NITRO_PRESET=firebase npm run build",
         "dev": "nuxt dev",
         "generate": "nuxt generate",
-        "preview": "nuxt preview",
-        "postinstall": "PORT=5000 nuxt prepare",
+        "preview": "PORT=5000 nuxt preview",
+        "postinstall": "nuxt prepare",
         "deploy": "NITRO_PRESET=firebase npm run build && firebase deploy"
     },
     "devDependencies": {
