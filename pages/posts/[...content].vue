@@ -18,8 +18,8 @@
 <script setup lang="ts">
 const { page } = useContent();
 useSeoMeta({
-    description: page.value.description ?? '프론트엔드 기술블로그 입니다.',
-    ogDescription: page.value.description ?? '프론트엔드 기술블로그 입니다.',
+    description: page.value.description || '프론트엔드 기술블로그 입니다.',
+    ogDescription: page.value.description || '프론트엔드 기술블로그 입니다.',
     ogImage: page.value.thumbnail ?? '/banner.jpg',
 });
 useHead({
