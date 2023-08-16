@@ -100,8 +100,7 @@ onMounted(() => {
 }
 
 .prose pre {
-    background-color: transparent;
-    border: 1px solid #1f2937;
+    background-color: #fafafa;
     color: #1f2937;
 }
 
