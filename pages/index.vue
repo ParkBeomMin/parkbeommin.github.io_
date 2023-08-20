@@ -1,7 +1,9 @@
 <template>
     <Info />
+    <KakaoBannerLong />
     <CategoryFilter />
     <PostList title="최신 포스트를 살펴보세요" :limit="5" :isShowCnt="false" />
+    <KakaoBannerBox />
 </template>
 
 <script setup lang="ts">
@@ -13,19 +15,19 @@ definePageMeta({
 });
 
 useSeoMeta({
-    title: "Beom Log",
-    ogTitle: "Beom Log",
-    description: "프론트엔드 기술블로그 입니다.",
-    ogDescription: "프론트엔드 기술블로그 입니다.",
-    ogImage: "/assets/banner.png",
+    title: 'Beom Log',
+    ogTitle: 'Beom Log',
+    description: '프론트엔드 기술블로그 입니다.',
+    ogDescription: '프론트엔드 기술블로그 입니다.',
+    ogImage: '/banner.jpg',
 });
 useHead({
     meta: [
         {
-            name: "keywords",
-            content: "기술블로그, JavaScript, Vue, Nuxt, FrontEnd, 프론트엔드",
+            name: 'keywords',
+            content: '기술블로그, JavaScript, Vue, Nuxt, FrontEnd, 프론트엔드',
         },
-        { name: "robots", content: "index, follow" },
+        { name: 'robots', content: 'index, follow' },
     ],
 });
 

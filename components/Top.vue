@@ -1,13 +1,13 @@
 <template>
     <header ref="header" :class="[`fixed flex h-16 w-full z-50`, { 'bg-white border-b-2 text-black fill-black': isScroll }, { 'text-white': !isScroll }]">
-        <div class="flex flex-row max-w-5xl w-7/12 m-auto h-full">
+        <div class="flex flex-row max-w-5xl md:w-7/12 w-10/12 m-auto h-full">
             <h1 class="flex-1 self-center">
                 <nuxt-link to="/">
                     <IconLogo :isScroll="isScroll" />
                 </nuxt-link>
             </h1>
             <ul class="flex flex-row">
-                <li v-for="(menu, i) of menuList" :key="`menu-${i}`" class="mr-2 transition hover:text-blue-400 self-center">
+                <li v-for="(menu, i) of menuList" :key="`menu-${i}`" class="mr-2 transition hover:text-blue-400 self-center text-sm md:text-xl">
                     <nuxt-link :to="menu.link">{{ menu.text }}</nuxt-link>
                 </li>
             </ul>
