@@ -29,6 +29,36 @@ useHead({
         { name: 'keywords', content: page.value.categories?.split(' ').join(', ') },
         { name: 'robots', content: 'index, follow' },
     ],
+    script: [
+        {
+            type: 'application/ld+json',
+            innerHTML: JSON.stringify({
+                type: 'application/ld+json',
+                textContent: {
+                    '@context': 'https://schema.org',
+                    '@type': 'BlogPosting',
+                    headline: page.value.title,
+                    description: page.value.description || '프론트엔드 기술블로그 입니다.',
+
+                    image: [page.value.thumbnail ?? '/banner.jpg'],
+                    author: [
+                        {
+                            '@type': 'Person',
+                            name: 'bmpark',
+                            email: 'club20608@gmail.com',
+                            url: 'https://beomlog.run.goorm.site/',
+                        },
+                    ],
+                    nationality: {
+                        '@type': 'Country',
+                        name: 'South Korea',
+                    },
+                    inLanguage: 'ko',
+                    keywords: page.value.categories?.split(' ').join(', '),
+                },
+            }),
+        },
+    ],
 });
 
 const getDate = (value: string) => {
@@ -100,8 +130,7 @@ onMounted(() => {
 }
 
 .prose pre {
-    background-color: transparent;
-    border: 1px solid #1f2937;
+    background-color: #fafafa;
     color: #1f2937;
 }
 
