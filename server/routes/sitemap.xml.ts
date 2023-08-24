@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
     // Fetch all documents
     const docs = await serverQueryContent(event).find();
     const sitemap = new SitemapStream({
-        hostname: 'https://beomlog.run.goorm.site',
+        hostname: window.location.hostname,
     });
 
     for (const doc of docs) {
