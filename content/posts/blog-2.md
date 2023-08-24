@@ -1,10 +1,10 @@
 ---
-title: '블로그 개편기 EP.2'
+title: "블로그 개편기 EP.2"
 date: 2023-08-11 11:19:00+09:00
 categories: blog nuxt tailwindCSS
 ---
 
-<img src='/images/web/banner.png'>
+<img src='/images/blog/banner.png'>
 
 > 깔끔하고 내 입맛대로 블로그를 꾸며보고 싶어 시작한 블로그 개편기..!
 
@@ -96,7 +96,11 @@ text {
 tailwindCSS로 편리하게 애니메이션 효과를 줄 수 있습니다.
 
 ```html
-<img class="m-auto w-24 h-24 rounded-full object-cover border-double border-2 border-slate-300 transition duration-500 hover:scale-125" src="~/assets/profile.jpg" alt="profile" />
+<img
+    class="m-auto w-24 h-24 rounded-full object-cover border-double border-2 border-slate-300 transition duration-500 hover:scale-125"
+    src="~/assets/profile.jpg"
+    alt="profile"
+/>
 ```
 
 ### 운영 시간 카운팅
@@ -171,7 +175,12 @@ const getDate = () => {
                 { 'bg-blue-400 text-white': getIsSelected(category) },
             ]"
     >
-        <a href="javascript:void(0)" @click="setCategory({ category }), getPostList()"> #{{ category }} </a>
+        <a
+            href="javascript:void(0)"
+            @click="setCategory({ category }), getPostList()"
+        >
+            #{{ category }}
+        </a>
     </li>
 </ul>
 ```
