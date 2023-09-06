@@ -62,10 +62,6 @@ git repo를 연결시켜 간단하게 배포를 진행할 수 있더군요..
 
 무료 도메인도 발급받아 도메인 변경도 했습니다. ✨✨
 
-[https://blog.beommin.kro.kr/](https://blog.beommin.kro.kr/)
-
-부족한 블로그겠지만, 점차 나아가보겠습니다.
-
 ## 🎊 BeomLog
 
 [https://blog.beommin.kro.kr/](https://blog.beommin.kro.kr/)
